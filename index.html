@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWS CCP 2026 — Study Guide</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      min-height: 100vh;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: #0f1117;
+      border-bottom: 1px solid #1e2535;
+      padding: 14px 20px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      z-index: 10;
+      flex-wrap: wrap;
+    }
+
+    header h1 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #f59e0b;
+      white-space: nowrap;
+    }
+
+    #search {
+      flex: 1;
+      min-width: 180px;
+      padding: 7px 12px;
+      background: #1a2035;
+      border: 1px solid #2d3748;
+      border-radius: 8px;
+      color: #e2e8f0;
+      font-size: 13px;
+      outline: none;
+    }
+    #search:focus { border-color: #f59e0b; }
+    #search::placeholder { color: #4a5568; }
+
+    #count {
+      font-size: 12px;
+      color: #4a5568;
+      white-space: nowrap;
+    }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 24px 16px 60px;
+    }
+
+    .question-card {
+      background: #141824;
+      border: 1px solid #1e2535;
+      border-radius: 12px;
+      padding: 20px 24px;
+      margin-bottom: 12px;
+    }
+
+    .question-card:hover {
+      border-color: #2d3748;
+    }
+
+    .q-num {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #f59e0b;
+      margin-bottom: 8px;
+    }
+
+    .q-text {
+      font-size: 14px;
+      line-height: 1.65;
+      color: #cbd5e0;
+      margin-bottom: 14px;
+    }
+
+    .q-answer {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: #0d2e1a;
+      border: 1px solid #166534;
+      border-radius: 6px;
+      padding: 5px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      color: #4ade80;
+    }
+
+    .q-answer::before {
+      content: "✓";
+      font-size: 11px;
+    }
+
+    .no-results {
+      text-align: center;
+      padding: 60px 20px;
+      color: #4a5568;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AWS CCP 2026</h1>
+  <input id="search" type="text" placeholder="Suche nach Frage oder Antwort..." />
+  <span id="count"></span>
+</header>
+
+<main id="list"></main>
+
+<script>
+  let allQuestions = [];
+
+  async function load() {
+    const res = await fetch("./questions.json");
+    allQuestions = await res.json();
+    render(allQuestions);
+  }
+
+  function render(questions) {
+    const list = document.getElementById("list");
+    const count = document.getElementById("count");
+    count.textContent = questions.length + " Fragen";
+
+    if (questions.length === 0) {
+      list.innerHTML = '<div class="no-results">Keine Ergebnisse gefunden.</div>';
+      return;
+    }
+
+    list.innerHTML = questions.map((q, i) => `
+      <div class="question-card">
+        <div class="q-num">Frage ${i + 1}</div>
+        <div class="q-text">${escHtml(q.question)}</div>
+        <div class="q-answer">${escHtml(q.correct)}</div>
+      </div>
+    `).join("");
+  }
+
+  function escHtml(str) {
+    return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  document.getElementById("search").addEventListener("input", function() {
+    const q = this.value.toLowerCase();
+    if (!q) { render(allQuestions); return; }
+    render(allQuestions.filter(item =>
+      item.question.toLowerCase().includes(q) ||
+      item.correct.toLowerCase().includes(q)
+    ));
+  });
+
+  load();
+</script>
+
+</body>
+</html>

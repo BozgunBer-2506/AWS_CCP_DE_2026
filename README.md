@@ -1,4 +1,4 @@
-# AWS CCP 2026 — Study Guide
+# AWS CCP DE 2026 — Study Guide in German
 
 A clean, searchable study guide for the AWS Certified Cloud Practitioner (CLF-C02) exam.
 

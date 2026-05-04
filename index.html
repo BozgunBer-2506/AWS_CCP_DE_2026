@@ -88,6 +88,12 @@
       margin-bottom: 14px;
     }
 
+    .q-answers {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
     .q-answer {
       display: inline-flex;
       align-items: center;
@@ -143,13 +149,17 @@
       return;
     }
 
-    list.innerHTML = questions.map((q, i) => `
-      <div class="question-card">
-        <div class="q-num">Frage ${i + 1}</div>
-        <div class="q-text">${escHtml(q.question)}</div>
-        <div class="q-answer">${escHtml(q.correct)}</div>
-      </div>
-    `).join("");
+    list.innerHTML = questions.map((q, i) => {
+      const answers = Array.isArray(q.correct) ? q.correct : [q.correct];
+      const badges = answers.map(a => `<div class="q-answer">${escHtml(a)}</div>`).join("");
+      return `
+        <div class="question-card">
+          <div class="q-num">Frage ${i + 1}</div>
+          <div class="q-text">${escHtml(q.question)}</div>
+          <div class="q-answers">${badges}</div>
+        </div>
+      `;
+    }).join("");
   }
 
   function escHtml(str) {
@@ -159,10 +169,11 @@
   document.getElementById("search").addEventListener("input", function() {
     const q = this.value.toLowerCase();
     if (!q) { render(allQuestions); return; }
-    render(allQuestions.filter(item =>
-      item.question.toLowerCase().includes(q) ||
-      item.correct.toLowerCase().includes(q)
-    ));
+    render(allQuestions.filter(item => {
+      const answers = Array.isArray(item.correct) ? item.correct : [item.correct];
+      return item.question.toLowerCase().includes(q) ||
+        answers.some(a => a.toLowerCase().includes(q));
+    }));
   });
 
   load();

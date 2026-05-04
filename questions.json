@@ -13,6 +13,13 @@
   },
   {
     "question": "Welche Vorteile bietet die AWS Cloud gegenüber einer traditionellen On-Premises-IT-Infrastruktur? (Wählen Sie zwei aus)",
+    "correct": [
+      "Investitionsausgaben durch variable Ausgaben ersetzen",
+      "Kein Raten mehr bei Ihrem Bedarf an Infrastrukturkapazität"
+    ]
+  },
+  {
+    "question": "Ein Unternehmen betreibt eine Anwendung auf einer Flotte von EC2-Instances. Das Unternehmen möchte die traditionelle Wartungsaufgabe, nämlich die rechtzeitige Durchführung von Bewertungen und die Überprüfung auf Betriebssystem-Schwachstellen, automatisieren. Welchen Dienst würden Sie als Cloud Practitioner für diesen Anwendungsfall vorschlagen?",
     "correct": "Amazon Inspector"
   },
   {
@@ -69,14 +76,29 @@
   },
   {
     "question": "Ein Startup möchte seine Daten und Anwendungen vom On-Premises-Rechenzentrum in die AWS Cloud migrieren. Welche der folgenden Optionen kann das Startup nutzen, um bei dieser Migration zu helfen? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Professional Services in Anspruch nehmen, um die Infrastrukturmigration zu beschleunigen",
+      "Das AWS Partner Network (APN) nutzen, um eine maßgeschneiderte Lösung für diese Infrastrukturmigration zu entwickeln"
+    ]
+  },
+  {
+    "question": "Ein Unternehmen möchte die optimale AWS-Ressourcenkonfiguration für seine Workloads identifizieren, um Kosten zu senken und die Workload-Leistung zu steigern. Welcher der folgenden Dienste kann verwendet werden, um diese Anforderung zu erfüllen?",
     "correct": "AWS Compute Optimizer"
   },
   {
-    "question": "Welche der folgenden Punkte sind gemäß dem AWS Shared Responsibility Model Verantwortlichkeiten von AWS? (Wählen Sie zwei aus)",
+    "question": "Welche AWS Route 53 Routing-Richtlinie würden Sie verwenden, um den Datenverkehr an mehrere Ressourcen zu leiten und auch zu wählen, wie viel Datenverkehr an jede Ressource geleitet wird?",
     "correct": "Gewichtetes Routing"
   },
   {
     "question": "Welche der folgenden sind die Vorteile des Cloud Computing? (Wählen Sie drei aus)",
+    "correct": [
+      "Von massiven Skaleneffekten profitieren",
+      "Investitionsausgaben durch variable Ausgaben ersetzen",
+      "Innerhalb von Minuten global agieren und Anwendungen mit nur wenigen Klicks in mehreren Regionen weltweit bereitstellen"
+    ]
+  },
+  {
+    "question": "Welche der folgenden Amazon S3-Speicherklassen benötigt die meiste Zeit, um Daten abzurufen (auch bekannt als Latenz bis zum ersten Byte)?",
     "correct": "Amazon S3 Glacier Deep Archive"
   },
   {
@@ -85,6 +107,13 @@
   },
   {
     "question": "Welche der folgenden sind Speicherdienste, die von der AWS Cloud angeboten werden? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon Simple Storage Service (Amazon S3)",
+      "Amazon Elastic File System (Amazon EFS)"
+    ]
+  },
+  {
+    "question": "Ein Unternehmen benötigt eine Speicherlösung für ein Projekt, bei dem die Daten seltener, aber bei Bedarf schnell abgerufen werden müssen. Welche S3-Speicherklasse ist für den gegebenen Anwendungsfall die kostengünstigste?",
     "correct": "Amazon S3 Standard-Infrequent Access (S3 Standard-IA)"
   },
   {
@@ -97,6 +126,13 @@
   },
   {
     "question": "Welche AWS-Dienste können verwendet werden, um Komponenten einer auf Microservices basierenden Anwendung in der AWS Cloud zu entkoppeln? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon Simple Queue Service (SQS)",
+      "Amazon Simple Notification Service (SNS)"
+    ]
+  },
+  {
+    "question": "Bei welchem der folgenden AWS-Dienste ist die Verschlüsselung standardmäßig aktiviert?",
     "correct": "AWS CloudTrail Logs"
   },
   {
@@ -109,6 +145,13 @@
   },
   {
     "question": "Welche der folgenden AWS-Support-Pläne bieten Zugang zu Beratung, Konfiguration und Fehlerbehebung bei der Interoperabilität von AWS mit Drittanbieter-Software? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Enterprise Support",
+      "AWS Business Support"
+    ]
+  },
+  {
+    "question": "Ein multinationales Unternehmen möchte fachkundige professionelle Beratung für die Migration zu AWS und die Verwaltung seiner Anwendungen in der AWS Cloud erhalten. Welche der folgenden Instanzen würden Sie für dieses Engagement empfehlen?",
     "correct": "APN Consulting Partner"
   },
   {
@@ -117,6 +160,24 @@
   },
   {
     "question": "Welche der folgenden Aussagen über die globale AWS-Infrastruktur sind korrekt? (Wählen Sie zwei aus)",
+    "correct": [
+      "Jede AWS-Region besteht aus mindestens drei Availability Zones (AZ).",
+      "Jede Availability Zone (AZ) besteht aus einem oder mehreren separaten Rechenzentren.",
+      "Jede AWS-Region besteht aus mindestens zwei Availability Zones (AZ).",
+      "Jede Availability Zone (AZ) besteht aus zwei oder mehr separaten Rechenzentren.",
+      "Jede AWS-Region besteht aus zwei oder mehr Edge Locations."
+    ]
+  },
+  {
+    "question": "Welche der folgenden AWS-Dienste unterstützen Reservierungen zur Kostenoptimierung? (Wählen Sie drei aus)",
+    "correct": [
+      "Amazon Elastic Compute Cloud (Amazon EC2)",
+      "Amazon DynamoDB",
+      "Amazon Relational Database Service (Amazon RDS)"
+    ]
+  },
+  {
+    "question": "Das DevOps-Team eines E-Commerce-Unternehmens versucht, Leistungsprobleme seiner serverlosen Anwendung zu beheben, die auf einer Microservices-Architektur basiert. Welchen AWS-Dienst würden Sie als Cloud Practitioner zur Lösung dieses Anwendungsfalls empfehlen?",
     "correct": "AWS X-Ray"
   },
   {
@@ -133,6 +194,15 @@
   },
   {
     "question": "Welche der folgenden AWS-Dienste unterstützen einen VPC-Gateway-Endpunkt für eine private Verbindung von einer VPC? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon Simple Storage Service (Amazon S3)",
+      "Amazon DynamoDB",
+      "Amazon Simple Storage Service (Amazon S3)",
+      "Amazon DynamoDB"
+    ]
+  },
+  {
+    "question": "Welche der folgenden Aussagen ist KORREKT bezüglich der Entfernung eines AWS-Kontos aus AWS Organizations?",
     "correct": "Das AWS-Konto muss in der Lage sein, als eigenständiges Konto zu fungieren. Nur dann kann es aus AWS Organizations entfernt werden."
   },
   {
@@ -153,6 +223,20 @@
   },
   {
     "question": "Was sind laut dem AWS Cloud Adoption Framework (AWS CAF) zwei Aufgaben, die ein Unternehmen bei der Planung der Migration in die AWS Cloud durchführen sollte, mit dem Ziel, im Rahmen seiner organisatorischen Transformation reaktionsschneller auf Kundenanfragen und \\-feedback zu werden? (Wählen Sie zwei aus)",
+    "correct": [
+      "Ihre Teams um Produkte und Wertströme herum organisieren.",
+      "Agile Methoden nutzen, um schnell zu iterieren und sich weiterzuentwickeln."
+    ]
+  },
+  {
+    "question": "Was wird das Ergebnis auf der Gesamtrechnung sein, sobald die Guthaben verwendet werden? (Wählen Sie zwei aus)",
+    "correct": [
+      "Guthaben eins, das im Juli abläuft, wird auf die Amazon EC2-Gebühr angewendet, was zu einer Amazon EC2-Gebühr von 900 $ und einer Amazon S3-Gebühr von 500 $ führt.",
+      "Dann wird Guthaben zwei auf die verbleibenden 900 $ der Amazon EC2-Nutzung angewendet."
+    ]
+  },
+  {
+    "question": "Welche der folgenden Instanzen wendet Patches auf das zugrunde liegende Betriebssystem für Amazon Aurora an?",
     "correct": "Das AWS-Produktteam automatisch"
   },
   {
@@ -165,18 +249,56 @@
   },
   {
     "question": "Eine Organisation muss sicher auf AWS-Dienste zugreifen und eine private Konnektivität zwischen ihren Virtual Private Clouds (VPCs) und unterstützten AWS-Diensten herstellen, ohne das öffentliche Internet zu nutzen. Welche AWS-Dienste können diese Anforderung erfüllen? (Wählen Sie zwei aus)",
+    "correct": "AWS PrivateLink"
+  },
+  {
+    "question": "Welcher der folgenden ist ein AWS-Datenbankdienst?",
     "correct": "Amazon Redshift"
   },
   {
     "question": "Ein IT-Unternehmen plant die Migration von einer On-Premises-Umgebung in die AWS Cloud. In welchen der folgenden Ausgabenbereiche ergeben sich Kosteneinsparungen, wenn das Unternehmen in die AWS Cloud wechselt? (Wählen Sie zwei aus)",
+    "correct": [
+      "Ausgaben für die Hardware-Infrastruktur des Rechenzentrums",
+      "Ausgaben für die physische Sicherheit des Rechenzentrums",
+      "Lizenzgebühr für SaaS-Anwendungen",
+      "Gehalt der Entwickler",
+      "Gehalt des Projektmanagers"
+    ]
+  },
+  {
+    "question": "AWS Shield Advanced bietet erweiterten DDoS-Angriffsschutz für Webanwendungen, die auf welchen der folgenden Ressourcen ausgeführt werden? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon Route 53",
+      "AWS Global Accelerator"
+    ]
+  },
+  {
+    "question": "Eine Webanwendung speichert alle ihre Daten in Amazon S3-Buckets. Ein Kunde hat vorgeschrieben, dass die Daten vor dem Senden an Amazon S3 verschlüsselt werden müssen. Welche der folgenden Techniken ist die richtige zur Verschlüsselung der Daten gemäß den Kundenanforderungen?",
     "correct": "Clientseitige Verschlüsselung mit dem AWS Encryption SDK aktivieren"
   },
   {
     "question": "Welche der folgenden Aussagen sind KORREKT bezüglich des AWS VPC-Dienstes? (Wählen Sie zwei aus)",
+    "correct": [
+      "Eine Sicherheitsgruppe kann nur Erlauben-Regeln haben.",
+      "Ein Network Address Translation Gateway (NAT-Gateway) wird von AWS verwaltet.",
+      "Eine Sicherheitsgruppe kann sowohl Erlauben- als auch Verweigern-Regeln haben.",
+      "Eine Network Address Translation Instance (NAT-Instance) wird von AWS verwaltet.",
+      "Eine Netzwerk-Zugriffskontrollliste (Netzwerk-ACL) kann nur Erlauben-Regeln haben."
+    ]
+  },
+  {
+    "question": "Welcher AWS-Dienst hilft Ihnen, Benachrichtigungen zu erhalten, wenn die Reservierungsauslastung unter den definierten Schwellenwert fällt?",
     "correct": "AWS Budgets"
   },
   {
     "question": "Welche der folgenden AWS-Support-Pläne bieten nur Zugriff auf die Kernprüfungen der AWS Trusted Advisor Best Practice Checks? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Basic Support",
+      "AWS Developer Support"
+    ]
+  },
+  {
+    "question": "Welcher der folgenden ist ein serverloser AWS-Dienst?",
     "correct": "AWS Lambda"
   },
   {
@@ -197,10 +319,25 @@
   },
   {
     "question": "Welche der folgenden Aussagen über AWS Lambda sind wahr? (Wählen Sie zwei aus)",
+    "correct": [
+      "Mit AWS Lambda können Sie Code ausführen, ohne Server bereitzustellen oder zu verwalten.",
+      "Sie bezahlen für die Rechenzeit, die Sie für AWS Lambda verbrauchen."
+    ]
+  },
+  {
+    "question": "Eine Organisation stellt ihre IT-Infrastruktur in einer Kombination aus ihrem On-Premises-Rechenzentrum und der AWS Cloud bereit. Wie würden Sie dieses Bereitstellungsmodell kategorisieren?",
     "correct": "Hybride Bereitstellung"
   },
   {
     "question": "Welche der folgenden Optionen können verwendet werden, um auf alle AWS-Dienste zuzugreifen und sie zu verwalten (wählen Sie drei aus)?",
+    "correct": [
+      "AWS Management Console",
+      "AWS Command Line Interface (AWS CLI)",
+      "AWS Software Development Kit (SDK)"
+    ]
+  },
+  {
+    "question": "Welche Richtlinie beschreibt die verbotene Nutzung der von Amazon Web Services angebotenen Webdienste?",
     "correct": "AWS Acceptable Use Policy"
   },
   {
@@ -209,7 +346,7 @@
   },
   {
     "question": "Welcher AWS-Dienst kann zum Speichern, Verwalten und Bereitstellen von Docker-Container-Images verwendet werden?",
-    "correct": "Amazon Elastic Container Registry (Amazon ECR) \\- Amazon Elastic Container Registry (Amazon ECR) kann zum Speichern, Verwalten und Bereitstellen von Docker-Container-Images verwendet werden. Amazon Elastic Container Registry (Amazon ECR) macht den Betrieb Ihrer Container-Repositorys überflüssig. Sie können dann Ihre Docker-Images aus Amazon Elastic Container Registry (Amazon ECR) ziehen und auf Amazon Elastic Container Service (Amazon ECS) ausführen."
+    "correct": "Amazon Elastic Container Registry (Amazon ECR) - Amazon Elastic Container Registry (Amazon ECR) kann zum Speichern, Verwalten und Bereitstellen von Docker-Container-Images verwendet werden. Amazon Elastic Container Registry (Amazon ECR) macht den Betrieb Ihrer Container-Repositorys überflüssig. Sie können dann Ihre Docker-Images aus Amazon Elastic Container Registry (Amazon ECR) ziehen und auf Amazon Elastic Container Service (Amazon ECS) ausführen."
   },
   {
     "question": "Ein Kunde hat eine VPC und ein Subnetz in der AWS Cloud erstellt. Welche der folgenden Aussagen ist korrekt?",
@@ -225,6 +362,13 @@
   },
   {
     "question": "Welche der folgenden Aussagen über das AWS-Root-Benutzerkonto sind korrekt? (Wählen Sie zwei aus)",
+    "correct": [
+      "Die Zugangsdaten für das Root-Benutzerkonto sind die E-Mail-Adresse und das Passwort, die zur Erstellung des AWS-Kontos verwendet wurden.",
+      "Es wird dringend empfohlen, die Multi-Faktor-Authentifizierung (MFA) für das Root-Benutzerkonto zu aktivieren."
+    ]
+  },
+  {
+    "question": "Was sind gemäß dem AWS Shared Responsibility Model die Verantwortlichkeiten des Kunden für Amazon RDS?",
     "correct": "Sicherheit und Compliance sind eine geteilte Verantwortung zwischen AWS und dem Kunden. Dieses geteilte Modell kann die Betriebslast des Kunden verringern, da AWS die Komponenten vom Host-Betriebssystem und der Virtualisierungsschicht bis hin zur physischen Sicherheit der Einrichtungen, in denen der Dienst betrieben wird, betreibt, verwaltet und kontrolliert."
   },
   {
@@ -237,7 +381,7 @@
   },
   {
     "question": "Welcher AWS-Dienst sollte verwendet werden, wenn Sie Container-Anwendungen ausführen möchten, aber den Betriebsaufwand für das Skalieren, Patchen, Sichern und Verwalten von Servern vermeiden möchten?",
-    "correct": "Amazon Elastic Container Service (Amazon ECS) \\- Fargate-Starttyp"
+    "correct": "Amazon Elastic Container Service (Amazon ECS) - Fargate-Starttyp"
   },
   {
     "question": "Was ist gemäß dem AWS Shared Responsibility Model eine Verantwortung des Kunden aus Sicherheits- und Compliance-Sicht?",
@@ -248,12 +392,12 @@
     "correct": "AWS Marketplace"
   },
   {
-    "question": "Welche der folgenden AWS-Dienste sind immer kostenlos nutzbar (wählen Sie zwei aus)?",
+    "question": "Ein Unternehmen verwendet einen Message-Broker-Dienst in seiner On-Premises-Anwendung und möchte diese Messaging-Funktionalität in die AWS Cloud verlagern. Welcher der folgenden AWS-Dienste ist die richtige Wahl, um die bestehende Funktionalität einfach zu migrieren?",
     "correct": "Amazon MQ"
   },
   {
     "question": "Welcher Dienst bietet eine personalisierte Ansicht des Status der AWS-Dienste, die Teil Ihrer Cloud-Architektur sind, sodass Sie die Auswirkungen auf Ihr Unternehmen schnell einschätzen können, wenn AWS-Dienste Probleme haben?",
-    "correct": "AWS Health \\- Ihr Konto-Zustands-Dashboard"
+    "correct": "AWS Health - Ihr Konto-Zustands-Dashboard"
   },
   {
     "question": "Welcher AWS-Dienst veröffentlicht aktuelle Informationen zum allgemeinen Status und zur Verfügbarkeit aller AWS-Dienste in allen Regionen der AWS Cloud?",
@@ -269,6 +413,13 @@
   },
   {
     "question": "Welche der folgenden sind Beispiele für horizontale Skalierbarkeit (auch als Elastizität bekannt)? (Wählen Sie zwei aus)",
+    "correct": [
+      "Elastic Load Balancing (ELB)",
+      "Lesereplikate in Amazon Relational Database Service (Amazon RDS)"
+    ]
+  },
+  {
+    "question": "Welche grundlegende Fähigkeit unter der Betriebsperspektive ist Teil des AWS Cloud Adoption Framework (AWS CAF)?",
     "correct": "Leistungs- und Kapazitätsmanagement"
   },
   {
@@ -276,12 +427,12 @@
     "correct": "Eine Sicherheitsgruppe fungiert als Firewall auf Instanzebene, während eine Netzwerk-Zugriffskontrollliste (Netzwerk-ACL) als Firewall auf Subnetzebene fungiert."
   },
   {
-    "question": "Das Engineering-Team eines IT-Unternehmens möchte die CPU-Auslastung seiner Flotte von Amazon Elastic Compute Cloud (Amazon EC2)-Instanzen überwachen und eine E-Mail an den Administrator senden, wenn die Auslastung 80 % übersteigt. Welche AWS-Dienste würden Sie als Cloud Practitioner empfehlen, um diese Lösung zu erstellen? (Wählen Sie zwei aus)",
+    "question": "Ein Online-Gaming-Unternehmen möchte Benutzer aus bestimmten geografischen Regionen vom Zugriff auf seine Inhalte blockieren. Welcher AWS-Dienst kann verwendet werden, um diese Aufgabe zu erfüllen?",
     "correct": "AWS Web Application Firewall (AWS WAF)"
   },
   {
     "question": "Ein IT-Unternehmen möchte jeden Montag um 2 Uhr morgens einen Protokoll-Backup-Prozess ausführen. Die übliche Laufzeit des Prozesses beträgt 5 Minuten. Welche AWS-Dienste würden Sie als Cloud Practitioner empfehlen, um eine serverlose Lösung für diesen Anwendungsfall zu erstellen? (Wählen Sie zwei aus)",
-    "correct": "Amazon Eventbridge \\- Amazon EventBridge ist ein Dienst, der Echtzeitzugriff auf Datenänderungen in AWS-Diensten, Ihren eigenen Anwendungen und Software-as-a-Service (SaaS)-Anwendungen ohne das Schreiben von Code bietet. Amazon EventBridge Scheduler ist ein serverloser Aufgabenplaner, der das Erstellen, Ausführen und Verwalten von Millionen von Zeitplänen über AWS-Dienste hinweg vereinfacht, ohne die zugrunde liegende Infrastruktur bereitzustellen oder zu verwalten."
+    "correct": "Amazon Eventbridge - Amazon EventBridge ist ein Dienst, der Echtzeitzugriff auf Datenänderungen in AWS-Diensten, Ihren eigenen Anwendungen und Software-as-a-Service (SaaS)-Anwendungen ohne das Schreiben von Code bietet. Amazon EventBridge Scheduler ist ein serverloser Aufgabenplaner, der das Erstellen, Ausführen und Verwalten von Millionen von Zeitplänen über AWS-Dienste hinweg vereinfacht, ohne die zugrunde liegende Infrastruktur bereitzustellen oder zu verwalten."
   },
   {
     "question": "Welche der folgenden Aussagen ist korrekt bezüglich der AWS-Preisrichtlinie für Datenübertragungsgebühren in oder aus einer AWS-Region?",
@@ -293,6 +444,13 @@
   },
   {
     "question": "Für welche der folgenden AWS-Ressourcen liefert der AWS Compute Optimizer Empfehlungen? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon Elastic Compute Cloud (Amazon EC2)-Instanzen, Amazon EC2 Auto Scaling-Gruppen",
+      "Amazon Elastic Block Store (Amazon EBS), AWS Lambda-Funktionen"
+    ]
+  },
+  {
+    "question": "Ein Gaming-Unternehmen sucht nach einer Technologie/einem Dienst, der ein konsistentes Gameplay mit geringer Latenz liefern kann, um ein großartiges Benutzererlebnis für Endbenutzer an verschiedenen Standorten zu gewährleisten. Welche AWS-Technologie/welcher AWS-Dienst wird den notwendigen Zugriff mit geringer Latenz für die Endbenutzer bereitstellen?",
     "correct": "AWS Local Zones"
   },
   {
@@ -309,6 +467,13 @@
   },
   {
     "question": "Das AWS Well-Architected Framework bietet Anleitungen zum Erstellen von cloudbasierten Anwendungen unter Verwendung von AWS Best Practices. Welche der folgenden Optionen sind die im AWS Well-Architected Framework genannten Säulen? (Wählen Sie zwei aus)",
+    "correct": [
+      "Zuverlässigkeit",
+      "Kostenoptimierung"
+    ]
+  },
+  {
+    "question": "Welcher der folgenden Anwendungsfälle wird von Amazon Rekognition NICHT unterstützt?",
     "correct": "Fotos schnell in der Größe ändern, um Miniaturansichten zu erstellen"
   },
   {
@@ -321,7 +486,7 @@
   },
   {
     "question": "Welches Preismodell für Amazon Elastic Compute Cloud (Amazon EC2) ist am kostengünstigsten und flexibelsten, ohne eine langfristige Ressourcenbindung oder Vorauszahlung zu erfordern, aber dennoch garantiert, dass die Instanz nicht unterbrochen wird?",
-    "correct": "On-Demand-Instanz \\- Eine On-Demand-Instanz ist eine Instanz, die Sie bei Bedarf verwenden. Sie haben die volle Kontrolle über ihren Lebenszyklus – Sie entscheiden, wann Sie sie starten, stoppen, in den Ruhezustand versetzen, starten, neu starten oder beenden. Für den Kauf von On-Demand-Instanzen ist keine langfristige Bindung erforderlich. Es gibt keine Vorauszahlung, und Sie zahlen nur für die Sekunden, in denen Ihre On-Demand-Instanzen laufen. Der Preis pro Sekunde für den Betrieb einer On-Demand-Instanz ist festgelegt. On-Demand-Instanzen können nicht unterbrochen werden."
+    "correct": "On-Demand-Instanz - Eine On-Demand-Instanz ist eine Instanz, die Sie bei Bedarf verwenden. Sie haben die volle Kontrolle über ihren Lebenszyklus – Sie entscheiden, wann Sie sie starten, stoppen, in den Ruhezustand versetzen, starten, neu starten oder beenden. Für den Kauf von On-Demand-Instanzen ist keine langfristige Bindung erforderlich. Es gibt keine Vorauszahlung, und Sie zahlen nur für die Sekunden, in denen Ihre On-Demand-Instanzen laufen. Der Preis pro Sekunde für den Betrieb einer On-Demand-Instanz ist festgelegt. On-Demand-Instanzen können nicht unterbrochen werden."
   },
   {
     "question": "Welche der folgenden Aussagen ist korrekt bezüglich der AWS-Speicherdienste?",
@@ -341,14 +506,21 @@
   },
   {
     "question": "Welche der folgenden AWS-Dienste sind global im Geltungsbereich? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Identity and Access Management (AWS IAM)",
+      "Amazon CloudFront"
+    ]
+  },
+  {
+    "question": "Die Flaggschiff-Anwendung eines Unternehmens läuft auf einer Flotte von Amazon Elastic Compute Cloud (Amazon EC2)-Instanzen. Gemäß den neuen Richtlinien suchen die Systemadministratoren nach der besten Möglichkeit, einen sicheren Shell-Zugriff auf Amazon Elastic Compute Cloud (Amazon EC2)-Instanzen bereitzustellen, ohne neue Ports zu öffnen oder öffentliche IP-Adressen zu verwenden. Welches Tool/welcher Dienst wird Ihnen helfen, diese Anforderung zu erfüllen?",
     "correct": "AWS Systems Manager Session Manager"
   },
   {
     "question": "Ein Startup sucht nach einem 24x7 telefonischen technischen Support für sein AWS-Konto. Welcher der folgenden AWS-Support-Pläne ist für diesen Anwendungsfall am kostengünstigsten?",
-    "correct": "AWS bietet vier verschiedene Support-Pläne an, um jeden seiner Kunden zu bedienen \\- AWS Developer Support, AWS Business Support, AWS Enterprise On-Ramp Support und AWS Enterprise Support-Pläne. Ein Basis-Support-Plan ist für alle AWS-Kunden enthalten."
+    "correct": "AWS bietet vier verschiedene Support-Pläne an, um jeden seiner Kunden zu bedienen - AWS Developer Support, AWS Business Support, AWS Enterprise On-Ramp Support und AWS Enterprise Support-Pläne. Ein Basis-Support-Plan ist für alle AWS-Kunden enthalten."
   },
   {
-    "question": "Welche AWS-Technologie/welcher AWS-Dienst hilft Ihnen, Ihre Ressourcen zu skalieren, um Angebot und Nachfrage in Einklang zu bringen und gleichzeitig Ihre Cloud-Lösung kostengünstig zu halten?",
+    "question": "Aus regulatorischen und Compliance-Gründen muss eine Organisation ein Hardwaregerät für alle Datenverschlüsselungsvorgänge in der Cloud verwenden. Welcher AWS-Dienst kann verwendet werden, um diese Compliance-Anforderung zu erfüllen?",
     "correct": "AWS CloudHSM"
   },
   {
@@ -364,7 +536,11 @@
     "correct": "Amazon S3 One Zone-Infrequent Access (S3 One Zone-IA) verwenden, um die Miniaturansichten zu speichern."
   },
   {
-    "question": "Welche der folgenden Lösungen können Sie verwenden, um Ihr On-Premises-Netzwerk mit der AWS Cloud zu verbinden (Wählen Sie zwei aus)?",
+    "question": "Was sind die grundlegenden Kostentreiber in der AWS Cloud?",
+    "correct": "Rechenleistung, Speicher und ausgehender Datentransfer"
+  },
+  {
+    "question": "Welcher der folgenden AWS-Dienste ermöglicht einer Datenbank ein flexibles Schema und unterstützt Dokumentendatenmodelle?",
     "correct": "Amazon DynamoDB"
   },
   {
@@ -376,7 +552,7 @@
     "correct": "Elastizität"
   },
   {
-    "question": "Eine Organisation plant den Umzug ihrer Infrastruktur vom On-Premises-Rechenzentrum in die AWS Cloud. Welche Optionen würden Sie als Cloud Practitioner empfehlen, damit die Organisation die richtigen AWS-Dienste zur Erstellung von Lösungen in der AWS Cloud identifizieren kann (Wählen Sie zwei aus)?",
+    "question": "Ein IT-Unternehmen hat eine statische Website auf Amazon Simple Storage Service (Amazon S3) bereitgestellt, aber die Website ist immer noch nicht erreichbar. Welche der folgenden Lösungen würden Sie als Cloud Practitioner vorschlagen, um dieses Problem zu beheben?",
     "correct": "Die Amazon S3-Bucket-Richtlinie korrigieren"
   },
   {
@@ -389,6 +565,10 @@
   },
   {
     "question": "Ein Kunde führt eine vergleichende Studie der Preismodelle von Amazon EFS und Amazon Elastic Block Store (Amazon EBS) durch, die mit den Amazon EC2-Instanzen verwendet werden, die die Anwendung hosten. Welche der folgenden Aussagen sind für diesen Anwendungsfall korrekt? (Wählen Sie zwei aus)",
+    "correct": "Amazon Elastic Block Store (Amazon EBS) Snapshots werden inkrementell gespeichert, was bedeutet, dass Ihnen nur die geänderten gespeicherten Blöcke in Rechnung gestellt werden."
+  },
+  {
+    "question": "Welchen AWS-Dienst verwenden Sie, wenn Sie große Mengen an On-Premises-Daten von einem entfernten Standort mit begrenzter Bandbreite in die AWS Cloud verschieben müssen?",
     "correct": "AWS Snowball"
   },
   {
@@ -397,10 +577,31 @@
   },
   {
     "question": "Welche der folgenden AWS-Dienste sind auf die Datenmigration von On-Premises in die AWS Cloud spezialisiert? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Snowball",
+      "AWS Database Migration Service (AWS DMS)"
+    ]
+  },
+  {
+    "question": "Welche der folgenden AWS-Dienste bieten Blockspeicher? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon Elastic Block Store (Amazon EBS)",
+      "Instance Store"
+    ]
+  },
+  {
+    "question": "Welche der folgenden AWS-Entitäten stellt die Informationen bereit, die zum Starten einer Amazon Elastic Compute Cloud (Amazon EC2)-Instanz erforderlich sind?",
     "correct": "Amazon Machine Image (AMI)"
   },
   {
     "question": "Welche der folgenden AWS-Dienste sind regional begrenzt? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Lambda",
+      "Amazon Rekognition"
+    ]
+  },
+  {
+    "question": "Ein Startup betreibt seine proprietäre Anwendung in Docker-Containern. Welchen AWS-Dienst würden Sie als Cloud Practitioner empfehlen, damit das Startup Container ausführen und trotzdem Zugriff auf die zugrunde liegenden Server haben kann?",
     "correct": "Amazon Elastic Container Service (Amazon ECS)"
   },
   {
@@ -413,7 +614,7 @@
   },
   {
     "question": "In welcher AWS-Region werden die Abrechnungsmetrikdaten von Amazon CloudWatch gespeichert?",
-    "correct": "US East (N. Virginia) \\- us-east-1"
+    "correct": "US East (N. Virginia) - us-east-1"
   },
   {
     "question": "Welche der folgenden Aussagen ist bezüglich der Preisgestaltung von AWS Shield Advanced korrekt?",
@@ -449,6 +650,13 @@
   },
   {
     "question": "Welche der folgenden Aussagen sind bezüglich des AWS Shared Responsibility Models korrekt? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS ist für die Sicherheit 'der' Cloud verantwortlich.",
+      "Für abstrahierte Dienste wie Amazon S3 betreibt AWS die Infrastrukturschicht, das Betriebssystem und die Plattformen."
+    ]
+  },
+  {
+    "question": "Eine globale E-Commerce-Plattform möchte den Zugriff auf ihre Website aus bestimmten Ländern einschränken, um regionalen Vorschriften zu entsprechen. Welcher AWS-Dienst ist am besten geeignet, um diese Einschränkung umzusetzen?",
     "correct": "Amazon WAF"
   },
   {
@@ -485,7 +693,7 @@
   },
   {
     "question": "Ein IT-Unternehmen möchte seine IT-Ressourcen (einschließlich Daten und Anwendungen) von einer AWS-Region in den USA in eine andere AWS-Region in Europa verlagern. Welche der folgenden Lösungen stellt die richtige Lösung für diesen Anwendungsfall dar?",
-    "correct": "Das Unternehmen sollte einfach damit beginnen, neue Ressourcen in der Ziel-AWS-Region zu erstellen und dann die relevanten Daten und Anwendungen in diese neue AWS-Region zu migrieren. \\- Das Unternehmen muss Ressourcen in der neuen AWS-Region erstellen und dann die relevanten Daten und Anwendungen in die neue AWS-Region verschieben. Es gibt keine fertige Lösung oder Dienstleistung, die das Unternehmen zur Erleichterung dieses Übergangs nutzen kann."
+    "correct": "Das Unternehmen sollte einfach damit beginnen, neue Ressourcen in der Ziel-AWS-Region zu erstellen und dann die relevanten Daten und Anwendungen in diese neue AWS-Region zu migrieren. - Das Unternehmen muss Ressourcen in der neuen AWS-Region erstellen und dann die relevanten Daten und Anwendungen in die neue AWS-Region verschieben. Es gibt keine fertige Lösung oder Dienstleistung, die das Unternehmen zur Erleichterung dieses Übergangs nutzen kann."
   },
   {
     "question": "Welche der folgenden sind empfohlene Best Practices für den AWS Identity and Access Management (AWS IAM)-Dienst? (Wählen Sie zwei aus)",
@@ -501,6 +709,13 @@
   },
   {
     "question": "Die Preisgestaltung von AWS Lambda basiert auf welchen der folgenden Kriterien? (Wählen Sie zwei aus)",
+    "correct": [
+      "Anzahl der Anfragen für die AWS Lambda-Funktion.",
+      "Die Zeit, die die AWS Lambda-Funktion zur Ausführung benötigt."
+    ]
+  },
+  {
+    "question": "Welche der folgenden Funktionen bietet Amazon Rekognition als sofort einsatzbereite Funktion?",
     "correct": "Objekte in einem Foto identifizieren"
   },
   {
@@ -533,6 +748,13 @@
   },
   {
     "question": "Welche der folgenden Aussagen über Kostenzuordnungs-Tags in der AWS-Abrechnung sind wahr? (Wählen Sie zwei aus)",
+    "correct": [
+      "Für jede Ressource muss jeder Tag-Schlüssel eindeutig sein, und jeder Tag-Schlüssel kann nur einen Wert haben.",
+      "Sie müssen sowohl von AWS generierte Tags als auch benutzerdefinierte Tags separat aktivieren, bevor sie im Cost Explorer oder in einem Kostenzuordnungsbericht erscheinen können."
+    ]
+  },
+  {
+    "question": "Welche der folgenden Aussagen über eine AWS Auto Scaling-Gruppe sind KORREKT? (Wählen Sie zwei aus)",
     "correct": "Die Auto Scaling-Gruppe skaliert horizontal hoch (scales out) und fügt weitere Amazon EC2-Instanzen hinzu, um einer erhöhten Nachfrage zu entsprechen."
   },
   {
@@ -573,6 +795,13 @@
   },
   {
     "question": "AWS Trusted Advisor analysiert Ihre AWS-Umgebung und gibt Best-Practice-Empfehlungen für welche der folgenden Kategorien? (Wählen Sie zwei aus)",
+    "correct": [
+      "Kostenoptimierung",
+      "Service-Limits"
+    ]
+  },
+  {
+    "question": "Bei welchen der folgenden AWS-Dienste ist die Datenverschlüsselung automatisch aktiviert? (Wählen Sie zwei aus)?",
     "correct": "Amazon Simple Storage Service (Amazon S3)"
   },
   {
@@ -581,6 +810,20 @@
   },
   {
     "question": "Welche der folgenden Aussagen sind KORREKT bezüglich Sicherheitsgruppen und Netzwerk-Zugriffskontrolllisten (Netzwerk-ACL)? (Wählen Sie zwei aus)",
+    "correct": [
+      "Eine Sicherheitsgruppe ist zustandsbehaftet (stateful), d. h., sie lässt den Rückverkehr automatisch zu.",
+      "Eine Netzwerk-Zugriffskontrollliste (Netzwerk-ACL) enthält eine nummerierte Liste von Regeln und wertet diese Regeln in aufsteigender Reihenfolge aus, um zu entscheiden, ob der Verkehr zugelassen wird."
+    ]
+  },
+  {
+    "question": "Welche AWS-Dienste/Funktionen unterstützen standardmäßig Hochverfügbarkeit? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon DynamoDB",
+      "Amazon Elastic File System (Amazon EFS)"
+    ]
+  },
+  {
+    "question": "Ein Entwicklungsteam sucht nach einem Forum, in dem die häufigsten Fragen und Anfragen von AWS-Kunden zusammen mit von AWS bereitgestellten Lösungen aufgelistet sind. Welches AWS-Forum/welcher Dienst kann zur Fehlerbehebung oder zur Suche nach einer Lösung verwendet werden?",
     "correct": "AWS Knowledge Center"
   },
   {
@@ -593,6 +836,13 @@
   },
   {
     "question": "Für welche der folgenden AWS-Dienste ist die Preisgestaltung für Reserved Instances (RI) verfügbar? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon Elastic Compute Cloud (Amazon EC2)",
+      "Amazon Relational Database Service (Amazon RDS)"
+    ]
+  },
+  {
+    "question": "Das QA-Team eines Unternehmens benötigt ein Tool/einen Dienst, der Zugriff auf verschiedene mobile Geräte mit unterschiedlichen Firmware- und Betriebssystemversionen bietet. Welcher AWS-Dienst kann diesen Anwendungsfall abdecken?",
     "correct": "AWS Device Farm"
   },
   {
@@ -601,6 +851,13 @@
   },
   {
     "question": "AWS Trusted Advisor kann bei welchen der folgenden häufigen Sicherheitsfehlkonfigurationen Warnungen ausgeben? (Wählen Sie zwei aus)?",
+    "correct": [
+      "Wenn Sie öffentlichen Zugriff auf Amazon S3-Buckets erlauben.",
+      "Wenn Sie die Protokollierung von Benutzeraktivitäten nicht aktivieren (AWS CloudTrail)."
+    ]
+  },
+  {
+    "question": "Welcher der folgenden AWS-Dienste kann verwendet werden, um Ihre AWS-Kontonutzung und \\-kosten zu prognostizieren?",
     "correct": "AWS Cost Explorer"
   },
   {
@@ -613,14 +870,35 @@
   },
   {
     "question": "Welche der folgenden Speicherklassen von Amazon Simple Storage Service (Amazon S3) erheben keine Gebühr für den Datenabruf? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon S3 Standard",
+      "Amazon S3 Intelligent-Tiering"
+    ]
+  },
+  {
+    "question": "Ein E-Commerce-Unternehmen möchte Benachrichtigungen erhalten, wenn die Auslastung der Amazon EC2 Reserved Instances (RI) unter einen bestimmten Schwellenwert fällt. Welcher AWS-Dienst kann für diesen Anwendungsfall verwendet werden?",
     "correct": "AWS Budgets"
   },
   {
     "question": "Welche der folgenden Arten sind im Preismodell von Amazon Simple Storage Service (Amazon S3) kostenlos? (Wählen Sie zwei aus)",
+    "correct": [
+      "Daten, die aus dem Internet eingehen",
+      "Daten, die an eine Amazon Elastic Compute Cloud (Amazon EC2)-Instanz übertragen werden, wenn sich die Instanz in derselben AWS-Region wie der S3-Bucket befindet"
+    ]
+  },
+  {
+    "question": "Welchen AWS-Dienst würden Sie verwenden, um einen logisch isolierten Bereich der AWS Cloud zu erstellen, in dem Sie AWS-Ressourcen in Ihrem virtuellen Netzwerk starten können?",
     "correct": "Virtual Private Cloud (VPC)"
   },
   {
     "question": "Welche der folgenden Entitäten sind Teil einer Amazon Virtual Private Cloud (Amazon VPC) in der AWS Cloud? (Wählen Sie zwei aus)",
+    "correct": [
+      "Subnetz",
+      "Internet Gateway"
+    ]
+  },
+  {
+    "question": "Welcher der folgenden AWS-Dienste bietet eine Lebenszykluskonfiguration für eine kostenoptimale Speicherung?",
     "correct": "Amazon Simple Storage Service (Amazon S3)"
   },
   {
@@ -657,6 +935,13 @@
   },
   {
     "question": "Ein Social-Media-Unternehmen möchte die kostengünstigste Strategie für die Bereitstellung von Amazon Elastic Compute Cloud (Amazon EC2)-Instanzen haben. Welche der folgenden Optionen würden Sie als Cloud Practitioner empfehlen? (Wählen Sie zwei aus)",
+    "correct": [
+      "Spot-Instanzen für Ad-hoc-Jobs verwenden, die unterbrochen werden können.",
+      "Reserved Instances (RI) verwenden, um Anwendungen mit einer vorhersagbaren Nutzung im nächsten Jahr auszuführen."
+    ]
+  },
+  {
+    "question": "Ein Finanzdienstleistungsunternehmen möchte sicherstellen, dass alle auf seinem Data Lake in Amazon Simple Storage Service (Amazon S3) hochgeladenen Kundendaten immer privat bleiben. Welche der folgenden Lösungen ist die effizienteste, um diese Compliance-Anforderung zu erfüllen?",
     "correct": "Amazon S3 Block Public Access verwenden, um sicherzustellen, dass alle Amazon S3-Ressourcen privat bleiben."
   },
   {
@@ -669,6 +954,13 @@
   },
   {
     "question": "Welche AWS-Dienste können zusammen verwendet werden, um Benachrichtigungen zu senden, wenn sich der Root-Benutzer des AWS-Kontos anmeldet? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon Simple Notification Service (Amazon SNS)",
+      "Amazon CloudWatch"
+    ]
+  },
+  {
+    "question": "Ein digitales Medienunternehmen möchte englischsprachige Untertitel in spanischsprachige Untertitel umwandeln. Welchen AWS-Dienst würden Sie als Cloud Practitioner für diesen Anwendungsfall empfehlen?",
     "correct": "Amazon Translate"
   },
   {
@@ -689,6 +981,13 @@
   },
   {
     "question": "Ein Social-Media-Analyseunternehmen möchte auf einen serverlosen Stack auf AWS migrieren. Welche der folgenden Szenarien können von AWS Lambda gehandhabt werden? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Lambda kann verwendet werden, um Code als Reaktion auf Ereignisse wie Aktualisierungen von DynamoDB-Tabellen auszuführen.",
+      "AWS Lambda kann zur Vorverarbeitung von Daten verwendet werden, bevor sie in Amazon S3-Buckets gespeichert werden."
+    ]
+  },
+  {
+    "question": "Welchen AWS-Dienst würden Sie für ein Datenverarbeitungsprojekt wählen, das eine schemalose Datenbank benötigt?",
     "correct": "Amazon DynamoDB"
   },
   {
@@ -701,22 +1000,64 @@
   },
   {
     "question": "Welche der folgenden sind serverlose Rechen-Dienste, die von AWS angeboten werden? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Lambda",
+      "AWS Fargate"
+    ]
+  },
+  {
+    "question": "Ein E-Commerce-Unternehmen hat seine IT-Infrastruktur vom On-Premises-Rechenzentrum in die AWS Cloud migriert. Für welche der folgenden Kosten ist das Unternehmen verantwortlich?",
     "correct": "Lizenzkosten für Anwendungssoftware"
   },
   {
     "question": "Welche der folgenden Vorteile bietet AWS Organizations? (Wählen Sie zwei aus)",
+    "correct": [
+      "Mengenrabatte für Amazon EC2 und Amazon S3, die über die Mitglieds-AWS-Konten aggregiert werden.",
+      "Die reservierten Amazon EC2-Instanzen unter den Mitglieds-AWS-Konten teilen."
+    ]
+  },
+  {
+    "question": "Welche der folgenden Optionen können Sie verwenden, um ein Bootstrap-Skript beim Starten einer Amazon Elastic Compute Cloud (Amazon EC2)-Instanz auszuführen?",
     "correct": "Benutzerdaten der Amazon EC2-Instanz"
   },
   {
     "question": "Welche der folgenden sind Vorteile der AWS Web Application Firewall (AWS WAF)? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Web Application Firewall (AWS WAF) kann alle Anfragen blockieren, außer denen, die Sie erlauben.",
+      "AWS Web Application Firewall (AWS WAF) kann auf das Vorhandensein von SQL-Code prüfen, der wahrscheinlich bösartig ist (bekannt als SQL-Injection)."
+    ]
+  },
+  {
+    "question": "Ein Unternehmen möchte dieselben Daten auf Amazon Simple Storage Service (Amazon S3) zwischen seinem Produktionskonto und mehreren Testkonten pflegen. Welche Technik sollten Sie wählen, um Daten in mehrere Testkonten zu kopieren und dabei die Objekt-Metadaten beizubehalten?",
     "correct": "Amazon S3 Replikation"
   },
   {
     "question": "Welche der folgenden Aussagen über AWS Global Accelerator sind KORREKT? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Global Accelerator ist gut für Nicht-HTTP-Anwendungsfälle geeignet.",
+      "AWS Global Accelerator bietet statische IP-Adressen, die als fester Einstiegspunkt zu Ihren Anwendungen dienen."
+    ]
+  },
+  {
+    "question": "Welches der folgenden ist in allen AWS-Support-Plänen verfügbar?",
     "correct": "AWS Health Dashboard – Ihr Kontozustand"
   },
   {
     "question": "Welche der folgenden sind empfohlene Sicherheits-Best-Practices für den Root-Benutzer des AWS-Kontos? (Wählen Sie zwei aus)",
+    "correct": [
+      "Multi-Faktor-Authentifizierung (MFA) für den Root-Benutzer des AWS-Kontos aktivieren.",
+      "Einen IAM-Benutzer mit Administratorrechten einrichten und den Root-Benutzer des AWS-Kontos nicht für administrative Aufgaben verwenden."
+    ]
+  },
+  {
+    "question": "Wie unterscheidet sich Amazon EC2 von traditionellen Hosting-Systemen? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon EC2 kann mit sich ändernden Rechenanforderungen skalieren.",
+      "Mit Amazon EC2 können Entwickler die Instanzen jederzeit starten und beenden, wenn sie sie benötigen."
+    ]
+  },
+  {
+    "question": "Welche Amazon Route 53 Routing-Richtlinie würden Sie verwenden, um den Verkehr an eine einzelne Ressource wie einen Webserver für Ihre Website zu leiten?",
     "correct": "Einfaches Routing"
   },
   {
@@ -737,10 +1078,31 @@
   },
   {
     "question": "Welche der folgenden AWS-Support-Pläne bieten programmatischen Zugriff auf die Funktionen des AWS Support Centers, um Ihre Supportfälle zu erstellen, zu verwalten und zu schließen? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Enterprise Support",
+      "AWS Business Support"
+    ]
+  },
+  {
+    "question": "Welche der folgenden Aussagen über Amazon Simple Storage Service (Amazon S3) sind wahr? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon Simple Storage Service (Amazon S3) ist ein schlüsselwertbasierter Objektspeicherdienst.",
+      "Amazon Simple Storage Service (Amazon S3) speichert Daten in einer flachen, nicht-hierarchischen Struktur."
+    ]
+  },
+  {
+    "question": "Welcher der folgenden AWS-Authentifizierungsmechanismen unterstützt ein AWS Multi-Faktor-Authentifizierungsgerät (AWS MFA), das Sie in einen USB-Anschluss Ihres Computers stecken können?",
     "correct": "U2F-Sicherheitsschlüssel"
   },
   {
     "question": "AWS Shield Advanced bietet erweiterten DDoS-Schutz für Webanwendungen, die auf welchen der folgenden Ressourcen ausgeführt werden? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon CloudFront",
+      "Amazon Elastic Compute Cloud (Amazon EC2)"
+    ]
+  },
+  {
+    "question": "Das DevOps-Team eines IT-Unternehmens möchte seine Server sowohl in der AWS Cloud als auch im On-Premise-Rechenzentrum zentral verwalten, um Software-Inventar zu sammeln, Befehle auszuführen, Server zu konfigurieren und in großem Umfang zu patchen. Welchen AWS-Dienst würden Sie als Cloud Practitioner für diesen Anwendungsfall empfehlen?",
     "correct": "AWS Systems Manager"
   },
   {
@@ -749,6 +1111,13 @@
   },
   {
     "question": "Welche der folgenden sind gemäß dem AWS Shared Responsibility Model die Verantwortlichkeiten des Kunden für AWS Identity and Access Management (AWS IAM)? (Wählen Sie zwei aus)",
+    "correct": [
+      "Multi-Faktor-Authentifizierung (MFA) für alle Konten aktivieren",
+      "Benutzerzugriffsmuster analysieren und AWS Identity and Access Management (AWS IAM)-Berechtigungen überprüfen"
+    ]
+  },
+  {
+    "question": "Welcher AWS-Dienst kann verwendet werden, um eine statische Website mit dem geringsten Aufwand zu hosten?",
     "correct": "Amazon Simple Storage Service (Amazon S3)"
   },
   {
@@ -777,7 +1146,7 @@
   },
   {
     "question": "Welche der folgenden Aussagen beschreibt AWS Elastic Beanstalk am zutreffendsten?",
-    "correct": "Es ist ein Platform as a Service (PaaS), mit dem Sie Webanwendungen und \\-dienste bereitstellen und skalieren können"
+    "correct": "Es ist ein Platform as a Service (PaaS), mit dem Sie Webanwendungen und -dienste bereitstellen und skalieren können"
   },
   {
     "question": "Ein Entwicklungsteam ist neu in der AWS Cloud und möchte eine Entwicklungs-/Testumgebung mit niedrigen monatlichen Preisen einrichten. Welcher AWS-Dienst kann diesen Anwendungsfall abdecken?",
@@ -805,11 +1174,18 @@
   },
   {
     "question": "Welche der folgenden sind Best Practices bei der Verwendung von AWS Organizations? (Wählen Sie ZWEI)",
+    "correct": [
+      "AWS-Konten pro Abteilung erstellen",
+      "Kontoberechtigungen mit Service Control Policies (SCP) einschränken"
+    ]
+  },
+  {
+    "question": "Ein Cloud Practitioner möchte identische Ressourcen über alle AWS-Regionen und Konten hinweg mithilfe von Vorlagen bereitstellen und dabei die Kosten schätzen. Welcher AWS-Dienst kann bei dieser Aufgabe helfen?",
     "correct": "AWS CloudFormation"
   },
   {
     "question": "Welcher AWS-Dienst kann genutzt werden, um einen RSS-Feed zu abonnieren und über den Status aller AWS-Dienstunterbrechungen benachrichtigt zu werden?",
-    "correct": "AWS Health Dashboard \\- Service Health"
+    "correct": "AWS Health Dashboard - Service Health"
   },
   {
     "question": "Ein Entwicklungsteam möchte kosteneffektiv Hunderttausende von Batch-Computing-Workloads auf AWS ausführen. Welchen AWS-Dienst würden Sie als Cloud Practitioner für diese Aufgabe verwenden?",
@@ -817,6 +1193,13 @@
   },
   {
     "question": "Welche der folgenden Dienste werden von Amazon Route 53 bereitgestellt? (Wählen Sie zwei)",
+    "correct": [
+      "Domain-Registrierung",
+      "Zustandsprüfungen und Überwachung"
+    ]
+  },
+  {
+    "question": "Ein Medienunternehmen möchte den Nutzern seiner Film-Streaming-Plattform personalisierte Inhaltsvorschläge ermöglichen. Welcher AWS-Dienst kann diese personalisierten Empfehlungen auf Basis historischer Daten liefern?",
     "correct": "Amazon Personalize"
   },
   {
@@ -829,10 +1212,24 @@
   },
   {
     "question": "Welche der folgenden Optionen sind Vorteile der Verwendung von AWS Elastic Load Balancing (ELB)? (Wählen Sie ZWEI)",
+    "correct": [
+      "Hochverfügbarkeit",
+      "Fehlertoleranz"
+    ]
+  },
+  {
+    "question": "Was ist der primäre Anwendungsfall für Amazon GuardDuty?",
     "correct": "Erkennung von böswilligen Aktivitäten und Bedrohungen in Ihren AWS-Konten und Workloads"
   },
   {
     "question": "Gemäß dem Modell der geteilten Verantwortung von AWS, welche der folgenden Verantwortlichkeiten liegen bei AWS? (Wählen Sie zwei)",
+    "correct": [
+      "Sicherheit des Rechenzentrums",
+      "Betriebsfähigkeit des Netzwerks"
+    ]
+  },
+  {
+    "question": "Das Hinzufügen von mehr CPU/RAM zu einer Amazon Elastic Compute Cloud (Amazon EC2)-Instanz stellt was dar?",
     "correct": "Vertikale Skalierung"
   },
   {
@@ -849,10 +1246,31 @@
   },
   {
     "question": "Gemäß dem Modell der geteilten Verantwortung von AWS, was liegt sowohl in der Verantwortung von AWS als auch des Kunden? (Wählen Sie zwei)",
+    "correct": [
+      "Konfigurationsmanagement",
+      "Konfiguration des Betriebssystems (OS)"
+    ]
+  },
+  {
+    "question": "Ein Unternehmen möchte seine Infrastruktur in die AWS Cloud verlagern. Was sollte in die Schätzung der Gesamtbetriebskosten (TCO) einbezogen werden? (Wählen Sie ZWEI)",
+    "correct": [
+      "Serveradministration",
+      "Strom/Kühlung"
+    ]
+  },
+  {
+    "question": "Ein Start-up möchte seine Kosten in der AWS Cloud überwachen und einen optimalen Savings Plan auswählen. Welchen AWS-Dienst würden Sie als Cloud Practitioner verwenden?",
     "correct": "AWS Cost Explorer"
   },
   {
     "question": "Ein Unternehmen möchte die Kosten für Amazon Elastic Compute Cloud (Amazon EC2) optimieren. Welche der folgenden Maßnahmen können bei dieser Aufgabe helfen? (Wählen Sie ZWEI)",
+    "correct": [
+      "Auto Scaling-Gruppen einrichten, um die Anzahl der Instanzen an die Nachfrage anzupassen",
+      "Amazon EC2 Reserved Instances (RIs) kaufen"
+    ]
+  },
+  {
+    "question": "Ein Unternehmen möchte die Kosten für AWS-Dienste nach Abteilung zur Kostenverteilung trennen. Welcher ist der einfachste Weg, diese Aufgabe zu erledigen?",
     "correct": "Tags für jede Abteilung erstellen"
   },
   {
@@ -893,6 +1311,20 @@
   },
   {
     "question": "Welche der folgenden Kriterien werden zur Berechnung der Gebühr für Amazon EBS Volumes verwendet? (Wählen Sie zwei)",
+    "correct": [
+      "Bereitgestellte IOPS",
+      "Volume-Typ"
+    ]
+  },
+  {
+    "question": "Ein Produktionsunternehmen mit vorhersehbarer Nutzung möchte die Kosten seiner Amazon Elastic Compute Cloud (Amazon EC2)-Instanzen durch die Verwendung von Reserved Instances (RI) reduzieren. Welche der folgenden Laufzeiten sind für Amazon EC2 Reserved Instances (RI) verfügbar? (Wählen Sie zwei)",
+    "correct": [
+      "1 Jahr",
+      "3 Jahre"
+    ]
+  },
+  {
+    "question": "Welches AWS-Tool kann Empfehlungen zu Best Practices für Leistung, Service-Limits und Kostenoptimierung geben?",
     "correct": "AWS Trusted Advisor"
   },
   {
@@ -909,6 +1341,13 @@
   },
   {
     "question": "Welche der folgenden Aussagen sind gemäß dem AWS Well-Architected Framework Empfehlungen in der Säule „Operational Excellence“? (Wählen Sie zwei)",
+    "correct": [
+      "Ausfälle antizipieren",
+      "Häufige, kleine, umkehrbare Änderungen vornehmen"
+    ]
+  },
+  {
+    "question": "Ein multinationales Unternehmen hat gerade seine Infrastruktur in die AWS Cloud verlagert und hat Mitarbeiter, die zu verschiedenen Büros auf der ganzen Welt reisen. Wie sollte das Unternehmen die AWS-Konten einrichten?",
     "correct": "Es ist nichts zu tun, AWS Identity and Access Management (AWS IAM) ist ein globaler Dienst"
   },
   {
@@ -917,6 +1356,13 @@
   },
   {
     "question": "Welche Arten der Überwachung können von Amazon CloudWatch bereitgestellt werden? (Wählen Sie ZWEI)",
+    "correct": [
+      "Anwendungsleistung",
+      "Ressourcennutzung"
+    ]
+  },
+  {
+    "question": "Welcher der folgenden AWS-Dienste kann zum Erzeugen, Verwenden und Verwalten von Verschlüsselungsschlüsseln in der AWS Cloud verwendet werden?",
     "correct": "AWS CloudHSM"
   },
   {
@@ -933,6 +1379,13 @@
   },
   {
     "question": "Welche der folgenden sind Vorteile der Nutzung der AWS Cloud? (Wählen Sie ZWEI)",
+    "correct": [
+      "Geschwindigkeit und Agilität erhöhen",
+      "Aufhören, über Kapazitäten zu raten"
+    ]
+  },
+  {
+    "question": "Ein Unternehmen plant, Chaos Engineering zu implementieren, um Schwachstellen aufzudecken, die die Widerstandsfähigkeit der Anwendung beeinträchtigen können. Welcher AWS-Dienst hilft bei der Umsetzung dieser Anforderung mit dem geringsten Aufwand?",
     "correct": "AWS Fault Injection Simulator (AWS FIS)"
   },
   {
@@ -1013,6 +1466,13 @@
   },
   {
     "question": "AWS Support bietet fünf Support-Pläne für seine Kunden an. Welche der folgenden Funktionen sind im AWS Basic Support Plan enthalten? (Wählen Sie zwei aus)",
+    "correct": [
+      "Eins-zu-eins-Antworten auf Konto- und Abrechnungsfragen",
+      "Service-Zustandsprüfungen"
+    ]
+  },
+  {
+    "question": "Welche Säule des AWS Well-Architected Framework konzentriert sich auf die effiziente Nutzung von IT- und Computerressourcen unter Berücksichtigung der richtigen Ressourcentypen und \\-größen basierend auf den Workload-Anforderungen?",
     "correct": "Säule der Leistungseffizienz"
   },
   {
@@ -1037,6 +1497,13 @@
   },
   {
     "question": "Welche der folgenden sind NoSQL-Datenbankdienste von AWS? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon Neptune",
+      "Amazon DocumentDB"
+    ]
+  },
+  {
+    "question": "Welcher AWS-Dienst ermöglicht es Ihnen, eine beliebige Anzahl von IoT-Geräten mit der Cloud zu verbinden, ohne dass Sie Server bereitstellen oder verwalten müssen?",
     "correct": "AWS IoT Core"
   },
   {
@@ -1053,6 +1520,20 @@
   },
   {
     "question": "Welche der folgenden Aussagen zu Amazon API Gateway sind korrekt? (Wählen Sie zwei aus)",
+    "correct": [
+      "Amazon API Gateway kann eine AWS Lambda-Funktion aufrufen, um das Front-End einer serverlosen Anwendung zu erstellen",
+      "API Gateway kann so konfiguriert werden, dass Daten direkt an Amazon Kinesis Data Stream gesendet werden"
+    ]
+  },
+  {
+    "question": "Welche der folgenden Aussagen zu AWS Control Tower und Service Control Policies sind korrekt? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Control Tower ist ein nativer AWS-Dienst, der einen vordefinierten Satz von Blueprints und Guardrails bereitstellt, um Kunden bei der Implementierung einer Landing Zone für neue AWS-Konten zu helfen",
+      "Service Control Policies (SCPs) sind eine Art von Organisationsrichtlinie, die Sie zur Verwaltung von Berechtigungen in Ihrer Organisation verwenden können"
+    ]
+  },
+  {
+    "question": "Eine Sicherheitsgruppe in einem AWS-Konto wurde geändert, und der Manager des Kontos hat Sie gebeten, die Details des Benutzers herauszufinden, der sie geändert hat. Als Cloud Practitioner, welchen AWS-Dienst werden Sie verwenden, um die notwendigen Informationen abzurufen?",
     "correct": "AWS CloudTrail"
   },
   {
@@ -1069,6 +1550,13 @@
   },
   {
     "question": "Welche der folgenden Punkte müssen bei der Auswahl einer AWS-Region für einen Dienst berücksichtigt werden? (Wählen Sie zwei aus)",
+    "correct": [
+      "Die Compliance- und Datenresidenz-Richtlinien der AWS-Region sollten Ihren Geschäftsanforderungen entsprechen",
+      "Die gewählte AWS-Region sollte geografisch näher an der Benutzerbasis liegen, die die gehosteten AWS-Dienste nutzt"
+    ]
+  },
+  {
+    "question": "Ein Unternehmen stellt Ihnen ein fertiges Produkt zur Verfügung, das vom Unternehmen selbst betrieben und verwaltet wird. Als Kunde nutzen Sie nur das Produkt, ohne sich um dessen Wartung oder Verwaltung kümmern zu müssen. Zu welchem Cloud-Computing-Modell gehört diese Art von Produkt?",
     "correct": "Software as a Service (SaaS)"
   },
   {
@@ -1077,10 +1565,17 @@
   },
   {
     "question": "Als Cloud Practitioner, welche der folgenden Anmeldeinformationen würden Sie für die Anmeldung an der AWS Management Console empfehlen, um die Best Practices für Sicherheit zu erfüllen? (Wählen Sie zwei aus)",
-    "correct": "IAM-Benutzername und \\-Passwort"
+    "correct": "IAM-Benutzername und -Passwort"
   },
   {
     "question": "Welche der folgenden sind von AWS empfohlene Sicherheits-Best-Practices für Identity and Access Management (IAM)? (Wählen Sie zwei aus)",
+    "correct": [
+      "Wenn Sie IAM-Richtlinien erstellen, gewähren Sie die geringsten Privilegien, die zur Durchführung einer Aufgabe erforderlich sind",
+      "Teilen Sie keine Sicherheitsanmeldeinformationen zwischen Konten, verwenden Sie stattdessen IAM-Rollen"
+    ]
+  },
+  {
+    "question": "Gemäß dem AWS Shared Responsibility Model liegt die Verwaltung welcher der folgenden AWS-Dienste in der Verantwortung des Kunden?",
     "correct": "Amazon Elastic Compute Cloud (Amazon EC2)"
   },
   {
@@ -1121,6 +1616,13 @@
   },
   {
     "question": "Welche der folgenden Aussagen über die von AWS Elastic Beanstalk unterstützten Zustandsüberwachungs- und Berichtsfunktionen sind korrekt? (Wählen Sie zwei aus)",
+    "correct": [
+      "Die Zustandsüberwachung von AWS Elastic Beanstalk kann feststellen, ob die Auto-Scaling-Gruppe der Umgebung verfügbar ist und mindestens eine Instanz umfasst.",
+      "Bei der grundlegenden Zustandsberichterstattung veröffentlicht der AWS Elastic Beanstalk-Dienst keine Metriken an Amazon CloudWatch."
+    ]
+  },
+  {
+    "question": "Auf welchen der folgenden Dienste kann die AWS Web Application Firewall (AWS WAF) bereitgestellt werden?",
     "correct": "Amazon CloudFront, Application Load Balancer, Amazon API Gateway, AWS AppSync"
   },
   {
@@ -1141,6 +1643,13 @@
   },
   {
     "question": "Welche der folgenden AWS-Dienste werden kostenlos angeboten? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS Elastic Beanstalk",
+      "AWS Auto Scaling"
+    ]
+  },
+  {
+    "question": "Eine Universität bietet ihren Studenten Zugang zu AWS-Diensten, um ihre Forschungsdaten zur Analyse einzureichen. Die Universität sucht nach dem kostengünstigsten Ansatz zur Notfallwiederherstellung und kann einen Datenverlust von einigen Stunden tolerieren. Welche Notfallwiederherstellungsstrategie ist für diesen Anwendungsfall gut geeignet?",
     "correct": "Backup- und Wiederherstellungsstrategie"
   },
   {
@@ -1149,10 +1658,24 @@
   },
   {
     "question": "Welche der folgenden Aussagen zu den AWS Support-Plänen sind korrekt? (Wählen Sie zwei aus)",
+    "correct": [
+      "Ein designierter Technical Account Manager ist nur für den AWS Enterprise Support-Plan verfügbar.",
+      "Sowohl der Basic- als auch der AWS Developer Support-Plan haben nur Zugriff auf die Kernprüfungen von Trusted Advisor."
+    ]
+  },
+  {
+    "question": "Welcher der folgenden AWS-Dienste wird global und nicht regional bereitgestellt?",
     "correct": "Amazon WorkSpaces"
   },
   {
     "question": "Welche der folgenden Aussagen über AWS-Regionen und Availability Zones (AZ) sind wahr? (Wählen Sie zwei aus)",
+    "correct": [
+      "Jede AWS-Region besteht aus mehreren, isolierten und physisch getrennten Availability Zones (AZ) innerhalb eines geografischen Gebiets.",
+      "Der gesamte Datenverkehr zwischen Availability Zones (AZ) ist verschlüsselt."
+    ]
+  },
+  {
+    "question": "Welcher der folgenden AWS-Dienste kann verwendet werden, um sowohl böswillige Aktivitäten als auch nicht autorisiertes Verhalten kontinuierlich zu überwachen, um Ihre AWS-Konten und Workloads zu schützen?",
     "correct": "Amazon GuardDuty"
   },
   {
@@ -1165,6 +1688,13 @@
   },
   {
     "question": "Welche der folgenden Aussagen über das AWS Shared Responsibility Model sind wahr? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS ist für das Patchen und Beheben von Fehlern in der Infrastruktur verantwortlich, aber die Kunden sind für das Patchen ihres Gastbetriebssystems und ihrer Anwendungen verantwortlich.",
+      "AWS schult AWS-Mitarbeiter, aber ein Kunde muss seine eigenen Mitarbeiter schulen."
+    ]
+  },
+  {
+    "question": "Welcher AWS-Dienst wird verwendet, um Code privat zu speichern und zu committen und bietet außerdem Funktionen zur Versionskontrolle?",
     "correct": "AWS CodeCommit"
   },
   {
@@ -1181,6 +1711,21 @@
   },
   {
     "question": "Welche der folgenden Aussagen über AWS Elastic Beanstalk sind wahr? (Wählen Sie zwei aus)",
+    "correct": [
+      "Mit AWS Elastic Beanstalk können Sie Anwendungen in der AWS Cloud schnell bereitstellen und verwalten, ohne sich mit der Infrastruktur vertraut machen zu müssen, auf der diese Anwendungen ausgeführt werden.",
+      "Für AWS Elastic Beanstalk fallen keine zusätzlichen Kosten an. Sie zahlen nur für die zugrunde liegenden AWS-Ressourcen, die Ihre Anwendung verbraucht.",
+      "Für AWS Elastic Beanstalk fallen keine zusätzlichen Kosten an. Sie zahlen nur für die zugrunde liegenden AWS-Ressourcen, die Ihre Anwendung verbraucht."
+    ]
+  },
+  {
+    "question": "Eine Organisation in den USA plant die Einführung einer neuen Produktlinie und benötigt zusätzliche IT-Infrastruktur, um die Arbeitslast zu bewältigen. Sie wünscht sich eine Lösung, die eine schnelle Bereitstellung von Ressourcen ermöglicht und die Einrichtungszeit minimiert. Welche Vorteile des Cloud Computing können der Organisation helfen, dieses Ziel zu erreichen? (Wählen Sie zwei aus)",
+    "correct": [
+      "Geschwindigkeit und Agilität erhöhen",
+      "Automatische Skalierung von Ressourcen je nach Bedarf ermöglichen"
+    ]
+  },
+  {
+    "question": "Ein Unternehmen möchte eine private, dedizierte Verbindung zwischen AWS und seinem On-Premises-Rechenzentrum herstellen. Welcher AWS-Dienst ist die richtige Wahl für diese Anforderung?",
     "correct": "AWS Direct Connect"
   },
   {

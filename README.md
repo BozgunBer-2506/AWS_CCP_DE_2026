@@ -1,16 +1,16 @@
-# AWS CCP DE 2026 — Study Guide (German)
+# AWS CCP DE 2026 - Study Guide (German)
 
 A clean, searchable study guide for the AWS Certified Cloud Practitioner (CLF-C02) exam.
-**382 questions** with correct answers only — no explanations, no wrong answers, no distractions.
+**382 questions** with correct answers only - no explanations, no wrong answers, no distractions.
 
 ## How it works
 
-Questions and answers are stored in a static `questions.json` file (parsed from a 700-page German Markdown source with a custom Node.js script). The page fetches this file on load and renders everything client-side with vanilla JS — no framework, no build step.
+Questions and answers are stored in a static `questions.json` file (parsed from a 700-page German Markdown source with a custom Node.js script). The page fetches this file on load and renders everything client-side with vanilla JS - no framework, no build step.
 
 The parser handles:
-- Single-answer and multi-answer questions (98 questions have 2–3 correct answers)
-- Inline "Option — explanation" answer formats
-- Markdown escape character normalization (`\-`, `\*` etc.)
+- Single-answer and multi-answer questions (98 questions have 2-3 correct answers)
+- Inline "Option - explanation" answer formats
+- Markdown escape character normalization
 - All 484 answers verified to be verbatim from the source
 
 ## Features
@@ -23,7 +23,7 @@ The parser handles:
 
 ## Stack
 
-- Pure HTML + CSS + JS — no framework, no build step, no dependencies
+- Pure HTML + CSS + JS - no framework, no build step, no dependencies
 - Data: static `questions.json` fetched via `fetch()`
 - Deployed on Vercel (static site, `outputDirectory: "."`)
 

@@ -9,7 +9,7 @@
 
     body {
       font-family: system-ui, -apple-system, sans-serif;
-      background: #0f1117;
+      background: #0b0f1a;
       color: #e2e8f0;
       min-height: 100vh;
     }
@@ -17,74 +17,84 @@
     header {
       position: sticky;
       top: 0;
-      background: #0f1117;
-      border-bottom: 1px solid #1e2535;
-      padding: 14px 20px;
+      background: rgba(11,15,26,0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1a2236;
+      padding: 12px 20px;
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 14px;
       z-index: 10;
       flex-wrap: wrap;
     }
 
     header h1 {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700;
-      color: #f59e0b;
+      color: #f1f5f9;
+      letter-spacing: 0.01em;
       white-space: nowrap;
+    }
+
+    header h1 span {
+      color: #818cf8;
     }
 
     #search {
       flex: 1;
       min-width: 180px;
       padding: 7px 12px;
-      background: #1a2035;
-      border: 1px solid #2d3748;
+      background: #131929;
+      border: 1px solid #1e2d45;
       border-radius: 8px;
       color: #e2e8f0;
       font-size: 13px;
       outline: none;
+      transition: border-color 0.15s;
     }
-    #search:focus { border-color: #f59e0b; }
-    #search::placeholder { color: #4a5568; }
+    #search:focus { border-color: #818cf8; box-shadow: 0 0 0 3px rgba(129,140,248,0.1); }
+    #search::placeholder { color: #3d4f6b; }
 
     #count {
       font-size: 12px;
-      color: #4a5568;
+      color: #3d4f6b;
       white-space: nowrap;
     }
 
     main {
       max-width: 860px;
       margin: 0 auto;
-      padding: 24px 16px 60px;
+      padding: 24px 16px 80px;
     }
 
     .question-card {
-      background: #141824;
-      border: 1px solid #1e2535;
+      background: #0f1623;
+      border: 1px solid #1a2236;
       border-radius: 12px;
       padding: 20px 24px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
+      transition: border-color 0.15s;
     }
 
     .question-card:hover {
-      border-color: #2d3748;
+      border-color: #2a3654;
     }
 
     .q-num {
       font-size: 10px;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: #f59e0b;
+      color: #818cf8;
       margin-bottom: 8px;
+      opacity: 0.7;
     }
 
     .q-text {
       font-size: 14px;
-      line-height: 1.65;
-      color: #cbd5e0;
+      line-height: 1.7;
+      color: #c8d3e8;
       margin-bottom: 14px;
     }
 
@@ -98,24 +108,25 @@
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: #0d2e1a;
-      border: 1px solid #166534;
+      background: #0a1f12;
+      border: 1px solid #1a4a2e;
       border-radius: 6px;
       padding: 5px 12px;
       font-size: 13px;
-      font-weight: 600;
-      color: #4ade80;
+      font-weight: 500;
+      color: #6ee7b7;
     }
 
     .q-answer::before {
       content: "✓";
-      font-size: 11px;
+      font-size: 10px;
+      opacity: 0.7;
     }
 
     .no-results {
       text-align: center;
       padding: 60px 20px;
-      color: #4a5568;
+      color: #3d4f6b;
       font-size: 14px;
     }
 
@@ -126,58 +137,58 @@
       display: flex;
       align-items: center;
       gap: 8px;
-      background: #1a2035;
-      border: 1px solid #2d3748;
+      background: #0f1623;
+      border: 1px solid #1e2d45;
       border-radius: 999px;
       padding: 8px 16px 8px 12px;
       font-size: 12px;
       font-weight: 600;
-      color: #e2e8f0;
+      color: #c8d3e8;
       cursor: pointer;
       z-index: 20;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
-      transition: border-color 0.15s, background 0.15s;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      transition: border-color 0.15s;
       user-select: none;
     }
 
-    #toggle-btn:hover { border-color: #f59e0b; }
+    #toggle-btn:hover { border-color: #818cf8; }
 
     #toggle-btn .dot {
-      width: 8px;
-      height: 8px;
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
-      background: #4ade80;
+      background: #6ee7b7;
       flex-shrink: 0;
       transition: background 0.15s;
     }
 
-    body.answers-hidden #toggle-btn .dot { background: #4a5568; }
+    body.answers-hidden #toggle-btn .dot { background: #3d4f6b; }
 
     body.answers-hidden .q-answers { visibility: hidden; }
 
     footer {
-      border-top: 1px solid #1e2535;
+      border-top: 1px solid #1a2236;
       padding: 24px 16px;
       text-align: center;
       font-size: 12px;
-      color: #4a5568;
-      line-height: 1.8;
+      color: #3d4f6b;
+      line-height: 1.9;
     }
 
     footer a {
-      color: #f59e0b;
+      color: #818cf8;
       text-decoration: none;
     }
 
     footer a:hover {
-      text-decoration: underline;
+      color: #a5b4fc;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>AWS CCP 2026</h1>
+  <h1>AWS CCP <span>2026</span></h1>
   <input id="search" type="text" placeholder="Suche nach Frage oder Antwort..." />
   <span id="count"></span>
 </header>

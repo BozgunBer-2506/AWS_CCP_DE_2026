@@ -228,8 +228,18 @@
   async function load() {
     const res = await fetch("./questions.json");
     allQuestions = await res.json();
-    render(allQuestions);
-    // Restore scroll position after render
+    const savedSearch = sessionStorage.getItem("search") || "";
+    if (savedSearch) {
+      document.getElementById("search").value = savedSearch;
+      const q = savedSearch.toLowerCase();
+      render(allQuestions.filter(item => {
+        const answers = Array.isArray(item.correct) ? item.correct : [item.correct];
+        return item.question.toLowerCase().includes(q) ||
+          answers.some(a => a.toLowerCase().includes(q));
+      }));
+    } else {
+      render(allQuestions);
+    }
     const saved = sessionStorage.getItem("scrollY");
     if (saved) window.scrollTo(0, parseInt(saved, 10));
   }
@@ -281,6 +291,7 @@
 
   document.getElementById("search").addEventListener("input", function() {
     const q = this.value.toLowerCase();
+    sessionStorage.setItem("search", this.value);
     if (!q) { render(allQuestions); return; }
     render(allQuestions.filter(item => {
       const answers = Array.isArray(item.correct) ? item.correct : [item.correct];

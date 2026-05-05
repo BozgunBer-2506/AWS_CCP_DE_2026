@@ -118,6 +118,24 @@
       color: #4a5568;
       font-size: 14px;
     }
+
+    footer {
+      border-top: 1px solid #1e2535;
+      padding: 24px 16px;
+      text-align: center;
+      font-size: 12px;
+      color: #4a5568;
+      line-height: 1.8;
+    }
+
+    footer a {
+      color: #f59e0b;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -130,6 +148,12 @@
 
 <main id="list"></main>
 
+<footer>
+  <div>Die Prüfungsfragen und -inhalte stammen aus den Übungsprüfungen von <strong>syntax.de</strong>.</div>
+  <div>Bei Fehlern oder Anmerkungen bitte melden: <a href="mailto:contact@thebozgun.com">contact@thebozgun.com</a></div>
+  <div style="margin-top:8px"><a href="https://thebozgun.com" target="_blank" rel="noopener">thebozgun.com</a></div>
+</footer>
+
 <script>
   let allQuestions = [];
 
@@ -137,6 +161,9 @@
     const res = await fetch("./questions.json");
     allQuestions = await res.json();
     render(allQuestions);
+    // Restore scroll position after render
+    const saved = sessionStorage.getItem("scrollY");
+    if (saved) window.scrollTo(0, parseInt(saved, 10));
   }
 
   function render(questions) {
@@ -165,6 +192,11 @@
   function escHtml(str) {
     return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
   }
+
+  // Save scroll position continuously
+  window.addEventListener("scroll", function() {
+    sessionStorage.setItem("scrollY", window.scrollY);
+  }, { passive: true });
 
   document.getElementById("search").addEventListener("input", function() {
     const q = this.value.toLowerCase();

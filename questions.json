@@ -559,7 +559,6 @@
   {
     "question": "Ein Startup sucht nach einem 24x7 telefonischen technischen Support für sein AWS-Konto. Welcher der folgenden AWS-Support-Pläne ist für diesen Anwendungsfall am kostengünstigsten?",
     "correct": [
-      "AWS bietet vier verschiedene Support-Pläne an, um jeden seiner Kunden zu bedienen - AWS Developer Support, AWS Business Support, AWS Enterprise On-Ramp Support und AWS Enterprise Support-Pläne. Ein Basis-Support-Plan ist für alle AWS-Kunden enthalten.",
       "AWS Business Support"
     ]
   },

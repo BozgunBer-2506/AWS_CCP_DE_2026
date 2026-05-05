@@ -30,3 +30,38 @@ The parser handles:
 ## Deploy
 
 Connected to GitHub. Every push to `main` triggers an automatic Vercel deployment.
+
+---
+
+# AWS CCP DE 2026 - Lernhilfe (Deutsch)
+
+Eine ubersichtliche, durchsuchbare Lernhilfe fur die AWS Certified Cloud Practitioner (CLF-C02) Prufung.
+**382 Fragen** mit den richtigen Antworten - keine Erklarungen, keine falschen Antworten, kein Ablenkung.
+
+## Wie es funktioniert
+
+Fragen und Antworten sind in einer statischen `questions.json` Datei gespeichert (geparst aus einer 700-seitigen deutschen Markdown-Quelle mit einem Node.js-Skript). Die Seite ladt diese Datei beim Start und rendert alles client-seitig mit vanilla JS - kein Framework, kein Build-Schritt.
+
+Der Parser verarbeitet:
+- Einzel- und Mehrfachantworten (98 Fragen haben 2-3 richtige Antworten)
+- "Option - Erklarung" Antwortformate in einer Zeile
+- Markdown-Escape-Zeichen Normalisierung
+- Alle 484 Antworten wurden wortwortlich aus der Quelle verifiziert
+
+## Funktionen
+
+- Volltextsuche uber Fragen und Antworten
+- Antworten ein-/ausblenden (Zustand bleibt nach Neuladen erhalten)
+- Scrollposition wird nach Neuladen wiederhergestellt
+- Dunkles UI, mobilfreundlich
+- Kein Login, kein Tracking, keine Werbung
+
+## Technologie
+
+- Reines HTML + CSS + JS - kein Framework, kein Build-Schritt, keine Abhangigkeiten
+- Daten: statische `questions.json` via `fetch()`
+- Deployment auf Vercel (statische Seite, `outputDirectory: "."`)
+
+## Deployment
+
+Mit GitHub verbunden. Jeder Push auf `main` lost ein automatisches Vercel-Deployment aus.

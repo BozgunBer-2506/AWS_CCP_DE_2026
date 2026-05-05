@@ -24,15 +24,15 @@ questions.forEach((q, idx) => {
   });
 });
 
-console.log(`Toplam soru  : ${questions.length}`);
-console.log(`Toplam cevap : ${aFound + aMissing}`);
-console.log(`Kaynakta var : ${aFound}`);
-console.log(`Bulunamayan  : ${aMissing}`);
+console.log(`Total questions : ${questions.length}`);
+console.log(`Total answers   : ${aFound + aMissing}`);
+console.log(`Found in source : ${aFound}`);
+console.log(`Not found       : ${aMissing}`);
 console.log("");
 
 if (errors.length === 0) {
-  console.log("TAMAM — Her cevap birebir MD kaynagindan geliyor. Hicbir ekleme veya yorum yok.");
+  console.log("OK - All answers match the MD source exactly.");
 } else {
-  console.log("Farklılıklar (muhtemelen sadece escape char normalizasyonu):");
+  console.log("Mismatches (likely escape char normalization):");
   errors.forEach(e => console.log(" -", e));
 }

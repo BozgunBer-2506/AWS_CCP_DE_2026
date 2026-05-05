@@ -305,6 +305,10 @@
   },
   {
     "question": "Welche der folgenden Aussagen über Skalierung, ein Designprinzip der Säule 'Zuverlässigkeit' des AWS Well-Architected Framework, ist FALSCH?",
+    "correct": "Fehlertoleranz wird durch eine Scale-Up-Operation erreicht."
+  },
+  {
+    "question": "Eine Forschungsgruppe möchte EC2-Instances verwenden, um eine wissenschaftliche Berechnungsanwendung auszuführen, die bereits über eine fehlertolerante Architektur verfügt. Die Anwendung benötigt hochleistungsfähige Hardware-Festplatten, die eine schnelle I/O-Leistung bieten. Welche der folgenden Speicheroptionen würden Sie als Cloud Practitioner als die kostengünstigste Lösung empfehlen?",
     "correct": "Instance Store"
   },
   {
@@ -313,6 +317,10 @@
   },
   {
     "question": "Welcher der folgenden AWS-Dienste fällt unter den Cloud-Computing-Typ Software as a Service (SaaS)?",
+    "correct": "Amazon Rekognition"
+  },
+  {
+    "question": "Was ist gemäß dem AWS Shared Responsibility Model eine Verantwortung von AWS aus Sicherheits- und Compliance-Sicht?",
     "correct": "Management von Edge Locations"
   },
   {
@@ -325,6 +333,14 @@
       "Mit AWS Lambda können Sie Code ausführen, ohne Server bereitzustellen oder zu verwalten.",
       "Sie bezahlen für die Rechenzeit, die Sie für AWS Lambda verbrauchen."
     ]
+  },
+  {
+    "question": "Access Key ID und Secret Access Key sind mit welcher der folgenden AWS Identity and Access Management (AWS IAM)-Entitäten verknüpft?",
+    "correct": "IAM-Benutzer"
+  },
+  {
+    "question": "Ein E-Commerce-Unternehmen möchte Daten aus einer Empfehlungs-Engine in einer Datenbank speichern. Welchen AWS-Dienst würden Sie als Cloud Practioner empfehlen, um diese Funktionalität mit dem GERINGSTEN Betriebsaufwand für jede Größenordnung bereitzustellen?",
+    "correct": "Amazon DynamoDB"
   },
   {
     "question": "Eine Organisation stellt ihre IT-Infrastruktur in einer Kombination aus ihrem On-Premises-Rechenzentrum und der AWS Cloud bereit. Wie würden Sie dieses Bereitstellungsmodell kategorisieren?",
@@ -413,6 +429,10 @@
   },
   {
     "question": "Welcher AWS-Dienst veröffentlicht aktuelle Informationen zum allgemeinen Status und zur Verfügbarkeit aller AWS-Dienste in allen Regionen der AWS Cloud?",
+    "correct": "AWS Health Dashboard - Dienstzustand"
+  },
+  {
+    "question": "Ein E-Commerce-Unternehmen möchte seine auf Amazon Elastic Compute Cloud (Amazon EC2)-Instanzen bereitgestellten Anwendungen auf Schwachstellen und Abweichungen von den AWS Best Practices bewerten. Welcher AWS-Dienst kann hierfür verwendet werden?",
     "correct": "Amazon Inspector"
   },
   {
@@ -542,6 +562,18 @@
     "correct": [
       "AWS bietet vier verschiedene Support-Pläne an, um jeden seiner Kunden zu bedienen - AWS Developer Support, AWS Business Support, AWS Enterprise On-Ramp Support und AWS Enterprise Support-Pläne. Ein Basis-Support-Plan ist für alle AWS-Kunden enthalten.",
       "AWS Business Support"
+    ]
+  },
+  {
+    "question": "Welche AWS-Technologie/welcher AWS-Dienst hilft Ihnen, Ihre Ressourcen zu skalieren, um Angebot und Nachfrage in Einklang zu bringen und gleichzeitig Ihre Cloud-Lösung kostengünstig zu halten?",
+    "correct": "AWS Auto Scaling"
+  },
+  {
+    "question": "Welche der folgenden AWS-Dienste können verwendet werden, um einen Distributed-Denial-of-Service (DDoS)-Angriff zu verhindern? (Wählen Sie drei aus)",
+    "correct": [
+      "AWS Shield",
+      "AWS Web Application Firewall (AWS WAF)",
+      "Amazon CloudFront mit Amazon Route 53"
     ]
   },
   {

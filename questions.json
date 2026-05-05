@@ -388,7 +388,6 @@
   {
     "question": "Was sind gemäß dem AWS Shared Responsibility Model die Verantwortlichkeiten des Kunden für Amazon RDS?",
     "correct": [
-      "Sicherheit und Compliance sind eine geteilte Verantwortung zwischen AWS und dem Kunden. Dieses geteilte Modell kann die Betriebslast des Kunden verringern, da AWS die Komponenten vom Host-Betriebssystem und der Virtualisierungsschicht bis hin zur physischen Sicherheit der Einrichtungen, in denen der Dienst betrieben wird, betreibt, verwaltet und kontrolliert.",
       "Datenbankverschlüsselung"
     ]
   },

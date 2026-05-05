@@ -119,6 +119,42 @@
       font-size: 14px;
     }
 
+    #toggle-btn {
+      position: fixed;
+      bottom: 24px;
+      right: 20px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: #1a2035;
+      border: 1px solid #2d3748;
+      border-radius: 999px;
+      padding: 8px 16px 8px 12px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #e2e8f0;
+      cursor: pointer;
+      z-index: 20;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.5);
+      transition: border-color 0.15s, background 0.15s;
+      user-select: none;
+    }
+
+    #toggle-btn:hover { border-color: #f59e0b; }
+
+    #toggle-btn .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #4ade80;
+      flex-shrink: 0;
+      transition: background 0.15s;
+    }
+
+    body.answers-hidden #toggle-btn .dot { background: #4a5568; }
+
+    body.answers-hidden .q-answers { visibility: hidden; }
+
     footer {
       border-top: 1px solid #1e2535;
       padding: 24px 16px;
@@ -148,10 +184,19 @@
 
 <main id="list"></main>
 
+<button id="toggle-btn" onclick="toggleAnswers()">
+  <span class="dot"></span>
+  <span id="toggle-label">Antworten ausblenden</span>
+</button>
+
 <footer>
   <div>Die Prüfungsfragen und -inhalte stammen aus den Übungsprüfungen von <strong>syntax.de</strong>.</div>
   <div>Bei Fehlern oder Anmerkungen bitte melden: <a href="mailto:contact@thebozgun.com">contact@thebozgun.com</a></div>
-  <div style="margin-top:8px"><a href="https://thebozgun.com" target="_blank" rel="noopener">thebozgun.com</a></div>
+  <div style="margin-top:8px">
+    <a href="https://thebozgun.com" target="_blank" rel="noopener">thebozgun.com</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/BozgunBer-2506" target="_blank" rel="noopener">GitHub</a>
+  </div>
 </footer>
 
 <script>
@@ -191,6 +236,19 @@
 
   function escHtml(str) {
     return str.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+  }
+
+  function toggleAnswers() {
+    const hidden = document.body.classList.toggle("answers-hidden");
+    document.getElementById("toggle-label").textContent =
+      hidden ? "Antworten anzeigen" : "Antworten ausblenden";
+    sessionStorage.setItem("answersHidden", hidden ? "1" : "");
+  }
+
+  // Restore toggle state
+  if (sessionStorage.getItem("answersHidden") === "1") {
+    document.body.classList.add("answers-hidden");
+    document.getElementById("toggle-label").textContent = "Antworten anzeigen";
   }
 
   // Save scroll position continuously

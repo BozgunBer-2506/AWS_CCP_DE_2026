@@ -2,7 +2,7 @@
 
 A clean, searchable study guide for the AWS Certified Cloud Practitioner (CLF-C02) exam.
 
-**298 questions** with correct answers. No explanations, no distractions — just the question and the right answer.
+**382 questions** with correct answers. No explanations, no distractions — just the question and the right answer.
 
 ## Features
 

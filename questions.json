@@ -254,7 +254,10 @@
   },
   {
     "question": "Eine Organisation muss sicher auf AWS-Dienste zugreifen und eine private Konnektivität zwischen ihren Virtual Private Clouds (VPCs) und unterstützten AWS-Diensten herstellen, ohne das öffentliche Internet zu nutzen. Welche AWS-Dienste können diese Anforderung erfüllen? (Wählen Sie zwei aus)",
-    "correct": "AWS PrivateLink"
+    "correct": [
+      "AWS PrivateLink",
+      "AWS Transit Gateway"
+    ]
   },
   {
     "question": "Welcher der folgenden ist ein AWS-Datenbankdienst?",

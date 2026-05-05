@@ -1,4 +1,4 @@
-# AWS CCP DE 2026 - Study Guide (German)
+# AWS CCP EXAM DE 2026 - Study Guide (German)
 
 A clean, searchable study guide for the AWS Certified Cloud Practitioner (CLF-C02) exam.
 **382 questions** with correct answers only - no explanations, no wrong answers, no distractions.
@@ -33,7 +33,7 @@ Connected to GitHub. Every push to `main` triggers an automatic Vercel deploymen
 
 ---
 
-# AWS CCP DE 2026 - Lernhilfe (Deutsch)
+# AWS CCP EXAM DE 2026 - Lernhilfe (Deutsch)
 
 Eine ubersichtliche, durchsuchbare Lernhilfe fur die AWS Certified Cloud Practitioner (CLF-C02) Prufung.
 **382 Fragen** mit den richtigen Antworten - keine Erklarungen, keine falschen Antworten, kein Ablenkung.

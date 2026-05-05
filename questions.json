@@ -653,7 +653,6 @@
   {
     "question": "Welches Merkmal von AWS Cloud bietet die Möglichkeit, schneller zu innovieren und Softwareanwendungen schnell zu entwickeln, zu testen und zu starten?",
     "correct": [
-      "Cloud Computing ist die On-Demand-Bereitstellung von IT-Ressourcen über das Internet mit Pay-as-you-go-Preisgestaltung. Anstatt physische Rechenzentren und Server zu kaufen, zu besitzen und zu warten, können Sie bei Bedarf auf Technologiedienste wie Rechenleistung, Speicher und Datenbanken von einem Cloud-Anbieter wie Amazon Web Services (AWS) zugreifen.",
       "Agilität"
     ]
   },

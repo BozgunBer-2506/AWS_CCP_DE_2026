@@ -1027,7 +1027,6 @@
   {
     "question": "Welche Säule des AWS Well-Architected Framework ist dafür verantwortlich, sicherzustellen, dass Sie die richtigen Ressourcentypen und \\-größen basierend auf Ihren Workload-Anforderungen auswählen?",
     "correct": [
-      "Das AWS Well-Architected Framework hilft Ihnen, die Vor- und Nachteile von Entscheidungen zu verstehen, die Sie beim Erstellen von Systemen auf AWS treffen. Durch die Verwendung des AWS Well-Architected Frameworks lernen Sie architektonische Best Practices für das Entwerfen und Betreiben zuverlässiger, sicherer, effizienter und kostengünstiger Systeme in der Cloud. Es bietet Ihnen eine Möglichkeit, Ihre Architekturen konsistent mit Best Practices zu vergleichen und Bereiche für Verbesserungen zu identifizieren.",
       "Leistungseffizienz"
     ]
   },

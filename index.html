@@ -130,22 +130,18 @@
     }
 
     #scroll-top {
-      position: fixed;
-      bottom: 24px;
-      right: 20px;
       display: none;
       align-items: center;
       justify-content: center;
-      width: 36px;
-      height: 36px;
-      background: #0f1623;
+      width: 30px;
+      height: 30px;
+      background: transparent;
       border: 1px solid #1e2d45;
       border-radius: 50%;
       color: #c8d3e8;
       cursor: pointer;
-      z-index: 20;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
-      transition: border-color 0.15s;
+      flex-shrink: 0;
+      transition: border-color 0.15s, color 0.15s;
       user-select: none;
     }
 
@@ -154,7 +150,7 @@
 
     #toggle-btn {
       position: fixed;
-      bottom: 70px;
+      bottom: 24px;
       right: 20px;
       display: flex;
       align-items: center;
@@ -214,13 +210,12 @@
   <h1>AWS CCP <span>2026</span></h1>
   <input id="search" type="text" placeholder="Suche nach Frage oder Antwort..." />
   <span id="count"></span>
+  <button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Nach oben">
+    <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 11V3M3 6l4-4 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
 </header>
 
 <main id="list"></main>
-
-<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Nach oben">
-  <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M7 11V3M3 6l4-4 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-</button>
 
 <button id="toggle-btn" onclick="toggleAnswers()">
   <span class="dot"></span>

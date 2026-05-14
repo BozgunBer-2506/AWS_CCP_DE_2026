@@ -1852,5 +1852,12 @@
   {
     "question": "Welche der folgenden Ereignisse werden standardmäßig von AWS CloudTrail protokolliert?",
     "correct": "Verwaltungsereignisse"
+  },
+  {
+    "question": "Bob und Susan haben jeweils ein AWS-Konto in AWS Organizations. Susan hat fünf Reserved Instances (RIs) desselben Typs und Bob hat keine. Während einer bestimmten Stunde nutzt Susan drei Instanzen und Bob sechs, insgesamt also neun Instanzen auf der konsolidierten Rechnung der Organisation. Welche der folgenden Aussagen über die konsolidierte Abrechnung in AWS Organizations sind korrekt? (Wählen Sie zwei aus)",
+    "correct": [
+      "AWS rechnet fünf Instanzen als Reserved Instances und die verbleibenden vier Instanzen als reguläre Instanzen ab.",
+      "Bob profitiert von den Kostenvorteilen von Susans Reserved Instance (RI) nur, wenn er seine Instanzen in derselben AWS-Region startet, in der Susan ihre Reserved Instances (RI) gekauft hat."
+    ]
   }
 ]

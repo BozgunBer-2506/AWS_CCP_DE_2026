@@ -767,6 +767,29 @@
     </table>
   </div>
 
+  <hr class="divider" />
+
+  <div class="section">
+    <div class="section-title">Dienst-Kombinationen - Zwei-Antwort-Fragen</div>
+    <p class="section-intro">Wenn die Prüfung fragt "Welche zwei Dienste werden zusammen verwendet":</p>
+    <table class="golden-table">
+      <thead><tr><th>Kombination</th><th>Wann</th></tr></thead>
+      <tbody>
+        <tr><td>Lambda + S3</td><td>Datei-Upload in S3 löst Lambda aus</td></tr>
+        <tr><td>Lambda + API Gateway</td><td>HTTP-Anfrage löst Lambda aus (serverlose API)</td></tr>
+        <tr><td>Lambda + DynamoDB</td><td>Datenbankänderung löst Lambda aus</td></tr>
+        <tr><td>SQS + Lambda</td><td>Nachricht in der Queue löst Lambda aus</td></tr>
+        <tr><td>SNS + SQS</td><td>SNS sendet an viele, SQS puffert (Fan-out Pattern)</td></tr>
+        <tr><td>CloudWatch + Lambda</td><td>Alarm löst Lambda zur automatischen Korrektur aus</td></tr>
+        <tr><td>CloudFront + S3</td><td>S3 als statische Website, CloudFront als CDN davor</td></tr>
+        <tr><td>ELB + Auto Scaling</td><td>Load Balancer verteilt Traffic, Auto Scaling passt EC2-Anzahl an</td></tr>
+        <tr><td>Shield + WAF</td><td>Shield für DDoS (Layer 3/4), WAF für App-Angriffe (Layer 7)</td></tr>
+        <tr><td>GuardDuty + CloudTrail</td><td>CloudTrail-Logs werden von GuardDuty analysiert</td></tr>
+      </tbody>
+    </table>
+    <div class="tip"><strong>Prüfungshinweis:</strong> "decouple" + "notification" in der Frage = SQS + SNS. "Serverless API" = API Gateway + Lambda.</div>
+  </div>
+
 </main>
 
 <script>

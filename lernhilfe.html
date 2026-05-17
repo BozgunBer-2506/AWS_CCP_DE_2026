@@ -125,7 +125,7 @@
     }
 
     ul li::before {
-      content: "–";
+      content: "-";
       position: absolute;
       left: 0;
       color: #fbbf24;
@@ -242,7 +242,7 @@
 <header>
   <h1>AWS CCP <span>2026</span></h1>
   <a href="index.html" class="back-btn">
-    ← Zurück zur Fragenliste
+    &larr; Zurück zur Fragenliste
   </a>
 </header>
 
@@ -257,7 +257,7 @@
     <p>Strukturierte Lernhilfe für die Prüfungsvorbereitung</p>
   </div>
 
-  <!-- BÖLÜM 1 -->
+  <!-- ABSCHNITT 1 -->
   <div class="section">
     <div class="section-title">Abschnitt 1 - AWS Globale Infrastruktur</div>
     <p class="section-intro">Die AWS-Infrastruktur ist geografisch hierarchisch aufgebaut. In der Prüfung werden diese Definitionen gezielt abgefragt.</p>
@@ -285,16 +285,70 @@
       <li>Dies nennt sich <strong>High Availability</strong> und <strong>Fault Tolerance</strong></li>
     </ul>
 
-    <h3>Edge Locations</h3>
-    <p>Kleine Verteilungspunkte in Metropolen weltweit, die Inhalte durch <strong>Caching</strong> möglichst nah am Endnutzer bereitstellen.</p>
-    <p>Genutzt von: <strong>Amazon CloudFront</strong> (CDN), <strong>Amazon Route 53</strong> (DNS)</p>
+    <h3>Edge Locations &amp; Regional Edge Caches</h3>
+    <p><strong style="color:#c8d3e8">Edge Locations:</strong> Kleine Verteilungspunkte in Metropolen weltweit, die Inhalte durch Caching möglichst nah am Endnutzer bereitstellen. Genutzt von CloudFront (CDN) und Route 53 (DNS).</p>
+    <p><strong style="color:#c8d3e8">Regional Edge Caches:</strong> Zwischenschicht zwischen Edge Location und Origin-Server. Grösser, längere Cache-Dauer - Inhalte, die aus Edge Locations verdrängt werden, bleiben hier erhalten.</p>
+
+    <h3>Local Zones</h3>
+    <p>Kleine Infrastrukturerweiterungen in Ballungsräumen, die über das <strong>private AWS-Glasfasernetz</strong> mit der Hauptregion verbunden sind. Ziel: Latenzen unter 1 ms für Gaming, Live-Streaming und Echtzeit-Rendering.</p>
+
+    <h3>AWS Outposts</h3>
+    <p>AWS-Hardware wird im eigenen Rechenzentrum des Kunden installiert und vollständig von AWS verwaltet. Für Anwendungsfälle mit gesetzlicher Pflicht zur lokalen Datenverarbeitung.</p>
   </div>
 
   <hr class="divider" />
 
-  <!-- BÖLÜM 2 -->
+  <!-- ABSCHNITT 2 -->
   <div class="section">
-    <div class="section-title">Abschnitt 2 - Compute-Dienste</div>
+    <div class="section-title">Abschnitt 2 - Shared Responsibility Model</div>
+    <p class="section-intro">Definiert, wer welche Sicherheitsverantwortung trägt - AWS oder der Kunde.</p>
+    <table>
+      <thead><tr><th>Partei</th><th>Verantwortung</th><th>Beispiele</th></tr></thead>
+      <tbody>
+        <tr><td>AWS</td><td>Security OF the Cloud</td><td>Physische Rechenzentren, Hardware, Netzwerk-Infrastruktur, Hypervisor</td></tr>
+        <tr><td>Kunde</td><td>Security IN the Cloud</td><td>OS-Patches, Anwendungscode, IAM-Konfiguration, Datenverschlüsselung</td></tr>
+      </tbody>
+    </table>
+    <div class="tip"><strong>Prüfungshinweis:</strong> "Physische Sicherheit" = immer AWS. "Datenverschlüsselung" oder "Zugriffsverwaltung" = immer Kunde.</div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ABSCHNITT 3 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 3 - AWS Cloud Adoption Framework (CAF)</div>
+    <p class="section-intro">Framework zur Planung der Cloud-Migration in 6 Perspektiven und 4 Phasen.</p>
+
+    <h3>6 Perspektiven</h3>
+    <table>
+      <thead><tr><th>Perspektive</th><th>Fokus</th></tr></thead>
+      <tbody>
+        <tr><td>Business</td><td>Beitrag der Cloud zu Unternehmenszielen, Return on Investment</td></tr>
+        <tr><td>People</td><td>Unternehmenskultur, Schulung, Talententwicklung</td></tr>
+        <tr><td>Governance</td><td>Risikomanagement, Compliance, Portfolio-Steuerung</td></tr>
+        <tr><td>Platform</td><td>Architekturprinzipien, Modernisierung der Infrastruktur</td></tr>
+        <tr><td>Security</td><td>Datenintegrität, Identitätsmanagement, Incident Response</td></tr>
+        <tr><td>Operations</td><td>Service-Management, Betriebsautomatisierung</td></tr>
+      </tbody>
+    </table>
+
+    <h3>4 Transformationsphasen</h3>
+    <table>
+      <thead><tr><th>Phase</th><th>Beschreibung</th></tr></thead>
+      <tbody>
+        <tr><td>Envision</td><td>Geschäftsziele definieren, Chancen identifizieren</td></tr>
+        <tr><td>Align</td><td>Lückenanalyse in allen 6 Perspektiven, Aktionsplan erstellen</td></tr>
+        <tr><td>Launch</td><td>Pilotprojekte starten, Mehrwert nachweisen</td></tr>
+        <tr><td>Scale</td><td>Erfolgreiche Piloten skalieren, Transformation ausweiten</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ABSCHNITT 4 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 4 - Compute-Dienste</div>
 
     <h3>Amazon EC2</h3>
     <p>Virtuelle Server in der Cloud, die in Sekunden gestartet werden können (IaaS). Betriebssystem, Festplatte und RAM werden selbst gewählt.</p>
@@ -304,13 +358,23 @@
       <thead><tr><th>Modell</th><th>Wann verwenden</th><th>Kosten</th></tr></thead>
       <tbody>
         <tr><td>On-Demand</td><td>Kurzfristig, unregelmäßiger Traffic, Tests ohne Unterbrechungstoleranz</td><td>Normalpreis</td></tr>
-        <tr><td>Savings Plans / Reserved</td><td>Dauerhaft laufende Server mit vorhersehbarem Traffic (1 oder 3 Jahre Laufzeit)</td><td>Bis zu 72% Rabatt</td></tr>
+        <tr><td>Savings Plans / Reserved</td><td>Dauerhaft laufende Server mit vorhersehbarem Traffic (1 oder 3 Jahre)</td><td>Bis zu 72% Rabatt</td></tr>
         <tr><td>Spot Instances</td><td>Aufgaben, die Unterbrechungen tolerieren (Big Data, Video-Rendering, Batch)</td><td>Bis zu 90% Rabatt</td></tr>
         <tr><td>Dedicated Hosts</td><td>Per-Core-Softwarelizenzen, strenge Compliance-Anforderungen</td><td>Teuerste Option</td></tr>
       </tbody>
     </table>
+    <div class="tip"><strong>Spot Instances:</strong> AWS kann den Server jederzeit zurücknehmen und gibt dabei nur 2 Minuten Vorwarnung. Für Webseiten-Hosting niemals geeignet.</div>
 
-    <div class="tip"><strong>Wichtig zu Spot Instances:</strong> AWS kann den Server jederzeit zurücknehmen und gibt dabei nur 2 Minuten Vorwarnung. Für das Hosting von Webseiten <strong>niemals</strong> geeignet.</div>
+    <h3>Elastic Load Balancing (ELB) &amp; Auto Scaling</h3>
+    <table>
+      <thead><tr><th>Typ</th><th>Schicht</th><th>Verwendung</th></tr></thead>
+      <tbody>
+        <tr><td>Application LB (ALB)</td><td>Layer 7 (HTTP/HTTPS)</td><td>Webanwendungen, URL-basiertes Routing</td></tr>
+        <tr><td>Network LB (NLB)</td><td>Layer 4 (TCP/UDP)</td><td>Höchste Performance, niedrige Latenz</td></tr>
+        <tr><td>Gateway LB (GWLB)</td><td>Layer 3</td><td>Sicherheitsgeräte (Firewall, IDS)</td></tr>
+      </tbody>
+    </table>
+    <p><strong style="color:#c8d3e8">EC2 Auto Scaling:</strong> Erhöht oder reduziert die Anzahl der EC2-Instanzen automatisch je nach Traffic. Wird zusammen mit ELB verwendet.</p>
 
     <h3>ECS / EKS / Fargate</h3>
     <table>
@@ -318,23 +382,18 @@
       <tbody>
         <tr><td>ECS</td><td>AWS-eigener Docker-Container-Verwaltungsdienst</td></tr>
         <tr><td>EKS</td><td>Verwalteter Kubernetes-Dienst auf AWS</td></tr>
-        <tr><td>Fargate</td><td>Serverloser Container-Motor für ECS/EKS – kein EC2-Management notwendig</td></tr>
+        <tr><td>Fargate</td><td>Serverloser Container-Motor für ECS/EKS - kein EC2-Management notwendig</td></tr>
       </tbody>
     </table>
 
     <h3>AWS Lambda</h3>
-    <p>Ereignisgesteuerter (event-driven) Code-Ausführungsdienst ohne Serverkonzept.</p>
-    <ul>
-      <li>Kein dauerhaft laufender Server notwendig</li>
-      <li>Code wird bei einem Ereignis ausgelöst (z.B. Datei-Upload in S3), läuft durch (max. 15 Min.) und stoppt</li>
-      <li>Abrechnung erfolgt auf <strong>Millisekunden-Basis</strong></li>
-    </ul>
+    <p>Ereignisgesteuerter (event-driven) Code-Ausführungsdienst ohne Serverkonzept. Code wird bei einem Ereignis ausgelöst (z.B. Datei-Upload in S3), läuft durch (max. 15 Min.) und stoppt. Abrechnung erfolgt auf Millisekunden-Basis.</p>
 
     <h3>Elastic Beanstalk vs. CloudFormation</h3>
     <table>
-      <thead><tr><th>Dienst</th><th>Kategorie</th><th>Funktion</th><th>Verwaltungsaufwand</th></tr></thead>
+      <thead><tr><th>Dienst</th><th>Kategorie</th><th>Funktion</th><th>Aufwand</th></tr></thead>
       <tbody>
-        <tr><td>Elastic Beanstalk</td><td>PaaS</td><td>Code hochladen – den Rest erledigt AWS</td><td>Gering</td></tr>
+        <tr><td>Elastic Beanstalk</td><td>PaaS</td><td>Code hochladen - den Rest erledigt AWS</td><td>Gering</td></tr>
         <tr><td>CloudFormation</td><td>IaC</td><td>Gesamte Infrastruktur per JSON/YAML-Template automatisieren</td><td>Hoch (volle Kontrolle)</td></tr>
       </tbody>
     </table>
@@ -342,24 +401,37 @@
 
   <hr class="divider" />
 
-  <!-- BÖLÜM 3 -->
+  <!-- ABSCHNITT 5 -->
   <div class="section">
-    <div class="section-title">Abschnitt 3 - Speicherdienste (Storage)</div>
+    <div class="section-title">Abschnitt 5 - Speicherdienste (Storage)</div>
 
     <h3>Amazon S3</h3>
-    <p>Objektorientierter Speicher (Object Storage) mit unbegrenzter Kapazität, zugänglich über das Internet. Daten werden in sogenannten "Buckets" gespeichert.</p>
+    <p>Objektorientierter Speicher (Object Storage) mit unbegrenzter Kapazität. Daten werden in sogenannten "Buckets" gespeichert.</p>
 
-    <p><strong style="color:#c8d3e8">S3-Speicherklassen (prüfungsrelevant):</strong></p>
+    <p><strong style="color:#c8d3e8">S3-Speicherklassen:</strong></p>
     <table>
       <thead><tr><th>Klasse</th><th>Verwendung</th><th>Zugriffszeit</th><th>Kosten</th></tr></thead>
       <tbody>
         <tr><td>Standard</td><td>Häufig abgerufene Daten</td><td>Sofort</td><td>Hoch</td></tr>
         <tr><td>Standard-IA</td><td>Selten abgerufene Daten (wenige Male pro Monat)</td><td>Sofort</td><td>Speicher günstig, Abruf kostenpflichtig</td></tr>
-        <tr><td>One Zone-IA</td><td>Unkritische, wiederherstellbare Daten</td><td>Sofort</td><td>Günstiger (nur 1 AZ – Risiko)</td></tr>
+        <tr><td>One Zone-IA</td><td>Unkritische, wiederherstellbare Daten</td><td>Sofort</td><td>Günstiger (nur 1 AZ - Risiko)</td></tr>
         <tr><td>Intelligent-Tiering</td><td>Unbekannte oder schwankende Zugriffshäufigkeit</td><td>Sofort</td><td>Automatisch optimiert</td></tr>
         <tr><td>Glacier Instant</td><td>Archivdaten, wenige Male pro Jahr</td><td>Millisekunden</td><td>Günstig</td></tr>
-        <tr><td>Glacier Flexible</td><td>Archiv ohne Echtzeitbedarf</td><td>3–5 Stunden</td><td>Sehr günstig</td></tr>
-        <tr><td>Glacier Deep Archive</td><td>Gesetzliche Archive (1–2x jährlich)</td><td>Bis 12 Stunden</td><td>Günstigste Option</td></tr>
+        <tr><td>Glacier Flexible</td><td>Archiv ohne Echtzeitbedarf</td><td>3-5 Stunden</td><td>Sehr günstig</td></tr>
+        <tr><td>Glacier Deep Archive</td><td>Gesetzliche Archive (1-2x jährlich)</td><td>Bis 12 Stunden</td><td>Günstigste Option</td></tr>
+      </tbody>
+    </table>
+
+    <p><strong style="color:#c8d3e8">Wichtige S3-Funktionen:</strong></p>
+    <table>
+      <thead><tr><th>Funktion</th><th>Beschreibung</th></tr></thead>
+      <tbody>
+        <tr><td>Versioning</td><td>Jede Version eines Objekts wird gespeichert - versehentliches Löschen oder Überschreiben kann rückgängig gemacht werden</td></tr>
+        <tr><td>MFA Delete</td><td>Zum Löschen einer Version ist eine MFA-Bestätigung erforderlich</td></tr>
+        <tr><td>Lifecycle Policies</td><td>Objekte werden nach einer bestimmten Zeit automatisch in eine günstigere Speicherklasse verschoben oder gelöscht</td></tr>
+        <tr><td>Static Website Hosting</td><td>Ein S3-Bucket kann direkt als statische Website bereitgestellt werden - kein Server erforderlich</td></tr>
+        <tr><td>Transfer Acceleration</td><td>Nutzt CloudFront Edge Locations, um Upload-Geschwindigkeit zu erhöhen</td></tr>
+        <tr><td>Cross-Region Replication (CRR)</td><td>Objekte werden automatisch in einen Bucket in einer anderen Region kopiert</td></tr>
       </tbody>
     </table>
 
@@ -372,30 +444,43 @@
         <tr><td>Storage Gateway</td><td>Hybrid</td><td>Verbindet On-Premise-Server mit AWS S3 als Brücke</td></tr>
       </tbody>
     </table>
-  </div>
 
-  <hr class="divider" />
-
-  <!-- BÖLÜM 4 -->
-  <div class="section">
-    <div class="section-title">Abschnitt 4 - Datenbankdienste</div>
+    <h3>AWS Snow Family</h3>
+    <p>Für die physische Übertragung großer Datenmengen zu AWS, wenn die Internetverbindung unzureichend ist.</p>
     <table>
-      <thead><tr><th>Dienst</th><th>Typ</th><th>Verwendung</th></tr></thead>
+      <thead><tr><th>Gerät</th><th>Kapazität</th><th>Verwendung</th></tr></thead>
       <tbody>
-        <tr><td>RDS</td><td>SQL (Relational)</td><td>MySQL, PostgreSQL, MariaDB, Oracle, SQL Server</td></tr>
-        <tr><td>Aurora</td><td>SQL (AWS-eigene Engine)</td><td>5x schneller als MySQL, vollständig verwaltet</td></tr>
-        <tr><td>DynamoDB</td><td>NoSQL / Serverless</td><td>Spielergebnisse, Warenkörbe – Millisekunden-Latenz weltweit</td></tr>
-        <tr><td>Redshift</td><td>Data Warehouse</td><td>Analyse von Milliarden Datensätzen, BI-Berichte</td></tr>
-        <tr><td>ElastiCache</td><td>In-Memory (Redis/Memcached)</td><td>Häufige Datenbankabfragen im RAM zwischenspeichern</td></tr>
+        <tr><td>Snowcone</td><td>8 TB</td><td>Tragbar, Feldarbeiten</td></tr>
+        <tr><td>Snowball Edge</td><td>80 TB</td><td>Große Datenmigration + Edge Computing</td></tr>
+        <tr><td>Snowmobile</td><td>100 PB</td><td>Rechenzentrumsmigration - Container auf LKW</td></tr>
       </tbody>
     </table>
   </div>
 
   <hr class="divider" />
 
-  <!-- BÖLÜM 5 -->
+  <!-- ABSCHNITT 6 -->
   <div class="section">
-    <div class="section-title">Abschnitt 5 - Netzwerk & Content Delivery</div>
+    <div class="section-title">Abschnitt 6 - Datenbankdienste</div>
+    <table>
+      <thead><tr><th>Dienst</th><th>Typ</th><th>Verwendung</th></tr></thead>
+      <tbody>
+        <tr><td>RDS</td><td>SQL (Relational)</td><td>MySQL, PostgreSQL, MariaDB, Oracle, SQL Server</td></tr>
+        <tr><td>Aurora</td><td>SQL (AWS-eigene Engine)</td><td>5x schneller als MySQL, vollständig verwaltet</td></tr>
+        <tr><td>DynamoDB</td><td>NoSQL / Serverless</td><td>Spielergebnisse, Warenkörbe - Millisekunden-Latenz weltweit</td></tr>
+        <tr><td>Redshift</td><td>Data Warehouse</td><td>Analyse von Milliarden Datensätzen, BI-Berichte</td></tr>
+        <tr><td>ElastiCache</td><td>In-Memory (Redis/Memcached)</td><td>Häufige Datenbankabfragen im RAM zwischenspeichern</td></tr>
+        <tr><td>DocumentDB</td><td>NoSQL (MongoDB-kompatibel)</td><td>Dokumentenbasierte Daten (JSON)</td></tr>
+        <tr><td>Neptune</td><td>Graphdatenbank</td><td>Soziale Netzwerke, Empfehlungssysteme</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ABSCHNITT 7 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 7 - Netzwerk &amp; Content Delivery</div>
 
     <h3>Amazon VPC</h3>
     <p>Ein isoliertes, privates virtuelles Netzwerk innerhalb der AWS-Cloud.</p>
@@ -407,6 +492,7 @@
         <tr><td>Internet Gateway (IGW)</td><td>Das "Ausgangstor" des VPC ins Internet</td></tr>
         <tr><td>NAT Gateway</td><td>Ermöglicht Private-Subnet-Servern einseitigen Internetzugang (z.B. für Updates)</td></tr>
         <tr><td>VPC Peering</td><td>Sichere Verbindung zwischen zwei VPCs über das interne AWS-Netz</td></tr>
+        <tr><td>Transit Gateway</td><td>Verbindet viele VPCs und Unternehmensnetzwerke zentral miteinander</td></tr>
       </tbody>
     </table>
 
@@ -414,26 +500,77 @@
     <table>
       <thead><tr><th>Dienst</th><th>Funktion</th></tr></thead>
       <tbody>
-        <tr><td>CloudFront</td><td>Globales CDN über Edge Locations – Inhalte werden vom nächstgelegenen Punkt ausgeliefert</td></tr>
-        <tr><td>Route 53</td><td>Intelligentes DNS – Domain-Registrierung, geografisches Routing, Health Checks</td></tr>
+        <tr><td>CloudFront</td><td>Globales CDN über Edge Locations - Inhalte werden vom nächstgelegenen Punkt ausgeliefert</td></tr>
+        <tr><td>Route 53</td><td>Intelligentes DNS - Domain-Registrierung, geografisches Routing, Health Checks</td></tr>
+        <tr><td>Global Accelerator</td><td>Optimiert Traffic über das AWS Anycast-Netz - kein CDN, feste IP-Adressen für TCP/UDP</td></tr>
         <tr><td>Site-to-Site VPN</td><td>Verschlüsselter Tunnel zwischen Firmennetzwerk und AWS über das Internet (schnell einzurichten)</td></tr>
-        <tr><td>Direct Connect</td><td>Dedizierte physische Glasfaserleitung von der Firmenzentrale zu AWS (maximale Sicherheit und Bandbreite)</td></tr>
+        <tr><td>Direct Connect</td><td>Dedizierte physische Glasfaserleitung von der Firmenzentrale zu AWS (maximale Sicherheit und feste Bandbreite)</td></tr>
+      </tbody>
+    </table>
+    <div class="tip"><strong>CloudFront vs. Global Accelerator:</strong> CloudFront cached Inhalte (CDN). Global Accelerator leitet Traffic über das AWS-Netz weiter (feste IP, für TCP/UDP).</div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ABSCHNITT 8 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 8 - Messaging &amp; Entwickler-Tools</div>
+
+    <h3>Messaging &amp; Integration</h3>
+    <table>
+      <thead><tr><th>Dienst</th><th>Typ</th><th>Verwendung</th></tr></thead>
+      <tbody>
+        <tr><td>SQS</td><td>Message Queue</td><td>Lose Kopplung zwischen Komponenten (Loose Coupling) - Nachrichten warten in der Queue, bis der Empfänger bereit ist</td></tr>
+        <tr><td>SNS</td><td>Pub/Sub</td><td>Eine Nachricht gleichzeitig an viele Empfänger (E-Mail, SMS, Lambda, SQS)</td></tr>
+        <tr><td>EventBridge</td><td>Event Bus</td><td>Serverloser Event-Bus zum Weiterleiten von Ereignissen zwischen AWS-Diensten, SaaS-Apps und eigenem Code</td></tr>
+      </tbody>
+    </table>
+    <div class="tip"><strong>SQS vs. SNS:</strong> SQS ist 1:1 (eine Nachricht liest genau ein Empfänger). SNS ist 1:n (eine Nachricht erhalten alle Abonnenten).</div>
+
+    <h3>CI/CD &amp; Entwickler-Tools</h3>
+    <table>
+      <thead><tr><th>Dienst</th><th>Funktion</th></tr></thead>
+      <tbody>
+        <tr><td>CodeCommit</td><td>Privates Git-Repository auf AWS</td></tr>
+        <tr><td>CodeBuild</td><td>Verwalteter CI-Dienst - kompiliert Code und führt Tests aus</td></tr>
+        <tr><td>CodeDeploy</td><td>Automatisierte Deployments auf EC2, Lambda oder On-Premise</td></tr>
+        <tr><td>CodePipeline</td><td>Orchestriert CodeCommit - CodeBuild - CodeDeploy als End-to-End CI/CD-Pipeline</td></tr>
+        <tr><td>Cloud9</td><td>Browser-basierte Cloud-IDE mit nativer AWS-Integration</td></tr>
+        <tr><td>X-Ray</td><td>Verteiltes Tracing - verfolgt Anfragen durch Microservices zur Fehlersuche und Performance-Analyse</td></tr>
       </tbody>
     </table>
   </div>
 
   <hr class="divider" />
 
-  <!-- BÖLÜM 6 -->
+  <!-- ABSCHNITT 9 -->
   <div class="section">
-    <div class="section-title">Abschnitt 6 - Sicherheit & Identität</div>
+    <div class="section-title">Abschnitt 9 - Analytics &amp; Big Data</div>
+    <table>
+      <thead><tr><th>Dienst</th><th>Verwendung</th></tr></thead>
+      <tbody>
+        <tr><td>Athena</td><td>Serverloser SQL-Dienst für S3-Dateien (CSV, JSON, Parquet) - keine Infrastruktur notwendig</td></tr>
+        <tr><td>OpenSearch Service</td><td>Verwaltetes Elasticsearch/OpenSearch-Cluster für Log-Analyse und Volltextsuche</td></tr>
+        <tr><td>EMR (Elastic MapReduce)</td><td>Verwaltetes Cluster für Apache Hadoop, Spark und andere Big-Data-Frameworks</td></tr>
+        <tr><td>Kinesis</td><td>Echtzeit-Datenstreaming - Sammlung, Verarbeitung und Analyse von IoT-, Log- und Clickstream-Daten</td></tr>
+        <tr><td>QuickSight</td><td>Business-Intelligence-Dienst - visuelle Dashboards und Berichte, ML-gestützte Insights</td></tr>
+      </tbody>
+    </table>
+    <div class="tip"><strong>Athena vs. Redshift:</strong> Athena für gelegentliche Abfragen direkt auf S3 (serverlos). Redshift für groß angelegte, dauerhafte Data-Warehouse-Abfragen (Cluster-basiert).</div>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ABSCHNITT 10 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 10 - Sicherheit &amp; Identität</div>
 
     <h3>AWS IAM</h3>
-    <p>Zentraler Sicherheitsdienst zur Verwaltung von Zugriffsrechten – <strong>global</strong> (nicht regionengebunden).</p>
+    <p>Zentraler Sicherheitsdienst zur Verwaltung von Zugriffsrechten - <strong>global</strong> (nicht regionengebunden).</p>
     <ul>
       <li><strong>Least Privilege:</strong> Jeder Nutzer erhält nur die Mindestrechte, die für seine Aufgabe notwendig sind</li>
       <li><strong>MFA:</strong> Zusätzlich zum Passwort sollte immer eine Zwei-Faktor-Authentifizierung aktiviert sein</li>
-      <li><strong>Root User:</strong> Darf für den Alltag <strong>niemals</strong> verwendet werden – sperren und einen IAM-Admin-Nutzer anlegen</li>
+      <li><strong>Root User:</strong> Darf für den Alltag niemals verwendet werden - sperren und einen IAM-Admin-Nutzer anlegen</li>
     </ul>
 
     <h3>Sicherheitsdienste im Überblick</h3>
@@ -442,55 +579,81 @@
       <tbody>
         <tr><td>Cognito</td><td>Anmeldung (Sign-in/Sign-up) für Endnutzer einer Anwendung (inkl. Google, Facebook Federation)</td></tr>
         <tr><td>Organizations</td><td>Verwaltung vieler AWS-Konten unter einem Dach (Consolidated Billing, SCPs)</td></tr>
+        <tr><td>SCP</td><td>Service Control Policy - maximale Berechtigungsgrenze für Konten innerhalb von Organizations</td></tr>
         <tr><td>Shield</td><td>DDoS-Schutz (Standard: kostenlos / Advanced: kostenpflichtig mit Schutzgarantie)</td></tr>
-        <tr><td>WAF</td><td>Web Application Firewall – blockiert Layer-7-Angriffe wie SQL Injection</td></tr>
+        <tr><td>WAF</td><td>Web Application Firewall - blockiert Layer-7-Angriffe wie SQL Injection</td></tr>
         <tr><td>GuardDuty</td><td>KI-gestützte Bedrohungserkennung auf Basis von VPC-, S3- und CloudTrail-Logs</td></tr>
-        <tr><td>Inspector</td><td>Scannt EC2-Instanzen und Container auf Sicherheitslücken und veraltete Pakete</td></tr>
+        <tr><td>Inspector</td><td>Scannt EC2-Instanzen und Container auf Sicherheitslücken (CVEs)</td></tr>
+        <tr><td>Macie</td><td>Erkennt automatisch sensible Daten (PII, Kreditkarten) in S3-Buckets</td></tr>
+        <tr><td>KMS</td><td>Erstellen und Verwalten von Verschlüsselungsschlüsseln (Key Management Service)</td></tr>
+        <tr><td>CloudHSM</td><td>Hardware-basiertes dediziertes Verschlüsselungsmodul (eigene Schlüssel, kein AWS-Zugriff)</td></tr>
         <tr><td>Artifact</td><td>Kostenloses Abrufen von ISO-, PCI-DSS- und SOC-Zertifikaten von AWS</td></tr>
         <tr><td>Secrets Manager</td><td>Verschlüsseltes Speichern von DB-Passwörtern und API-Schlüsseln mit automatischer Rotation</td></tr>
+        <tr><td>ACM</td><td>AWS Certificate Manager - SSL/TLS-Zertifikate bereitstellen und verwalten</td></tr>
       </tbody>
     </table>
   </div>
 
   <hr class="divider" />
 
-  <!-- BÖLÜM 7 -->
+  <!-- ABSCHNITT 11 -->
   <div class="section">
-    <div class="section-title">Abschnitt 7 - Management & Überwachung</div>
+    <div class="section-title">Abschnitt 11 - Management &amp; Überwachung</div>
     <table>
       <thead><tr><th>Dienst</th><th>Frage</th><th>Funktion</th></tr></thead>
       <tbody>
-        <tr><td>CloudWatch</td><td>Wie läuft die Performance?</td><td>CPU, RAM, Netzwerk-Metriken – Alarme und Auto Scaling auslösen</td></tr>
+        <tr><td>CloudWatch</td><td>Wie läuft die Performance?</td><td>CPU, RAM, Netzwerk-Metriken - Alarme und Auto Scaling auslösen</td></tr>
         <tr><td>CloudTrail</td><td>Wer hat was getan?</td><td>Protokolliert alle Nutzeraktivitäten und API-Aufrufe (Audit-Log)</td></tr>
         <tr><td>Config</td><td>Hat sich die Konfiguration geändert?</td><td>Speichert Konfigurationsverlauf, prüft Compliance</td></tr>
         <tr><td>Trusted Advisor</td><td>Ist das Konto optimiert?</td><td>Empfehlungen zu Kosten, Sicherheit, Fehlertoleranz, Performance und Service-Limits</td></tr>
+        <tr><td>Systems Manager</td><td>Server-Management</td><td>Verwaltet EC2-Flotten zentral, spielt Patches ein, führt Befehle aus</td></tr>
+        <tr><td>Control Tower</td><td>Multi-Account-Setup</td><td>Bereitet AWS-Umgebung mit Best-Practice-Regeln auf Basis von Organizations vor</td></tr>
       </tbody>
     </table>
   </div>
 
   <hr class="divider" />
 
-  <!-- BÖLÜM 8 -->
+  <!-- ABSCHNITT 12 -->
   <div class="section">
-    <div class="section-title">Abschnitt 8 - KI & Machine Learning</div>
+    <div class="section-title">Abschnitt 12 - KI &amp; Machine Learning</div>
     <table>
       <thead><tr><th>Dienst</th><th>Funktion</th></tr></thead>
       <tbody>
-        <tr><td>Transcribe</td><td>Sprache → Text (Speech-to-Text)</td></tr>
-        <tr><td>Polly</td><td>Text → Sprache (Text-to-Speech)</td></tr>
+        <tr><td>Transcribe</td><td>Sprache - Text (Speech-to-Text)</td></tr>
+        <tr><td>Polly</td><td>Text - Sprache (Text-to-Speech)</td></tr>
         <tr><td>Translate</td><td>Textübersetzung zwischen Sprachen</td></tr>
         <tr><td>Rekognition</td><td>Gesichts-, Objekt- und Inhaltserkennung in Bildern/Videos</td></tr>
-        <tr><td>Lex</td><td>Chatbot-Engine für Sprach- und Texteingabe</td></tr>
+        <tr><td>Lex</td><td>Chatbot-Engine für Sprach- und Texteingabe (Alexa-Technologie)</td></tr>
+        <tr><td>Comprehend</td><td>NLP - Stimmungsanalyse, Schlüsselwörter aus Text extrahieren</td></tr>
         <tr><td>SageMaker</td><td>Plattform zum Entwickeln, Trainieren und Deployen von ML-Modellen</td></tr>
+        <tr><td>Kendra</td><td>Intelligente Suchmaschine für Unternehmensdokumente</td></tr>
+        <tr><td>Personalize</td><td>Echtzeit-Empfehlungssystem (wie bei Amazon.com)</td></tr>
       </tbody>
     </table>
   </div>
 
   <hr class="divider" />
 
-  <!-- BÖLÜM 9 -->
+  <!-- ABSCHNITT 13 -->
   <div class="section">
-    <div class="section-title">Abschnitt 9 - Cloud-Wirtschaft & Kostentools</div>
+    <div class="section-title">Abschnitt 13 - Migrationsdienste</div>
+    <table>
+      <thead><tr><th>Dienst</th><th>Funktion</th></tr></thead>
+      <tbody>
+        <tr><td>Database Migration Service (DMS)</td><td>Datenbanken mit minimaler Ausfallzeit zu AWS migrieren (z.B. Oracle zu RDS)</td></tr>
+        <tr><td>Application Migration Service (MGN)</td><td>Physische/virtuelle Server als EC2-Instanzen in die Cloud heben</td></tr>
+        <tr><td>AWS Transfer Family</td><td>Dateiübertragung per SFTP/FTP direkt in S3</td></tr>
+        <tr><td>DataSync</td><td>Automatische Datensynchronisation zwischen On-Premise-Speicher und AWS</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ABSCHNITT 14 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 14 - Cloud-Wirtschaft &amp; Kostentools</div>
 
     <h3>CapEx vs. OpEx</h3>
     <table>
@@ -507,8 +670,49 @@
       <thead><tr><th>Tool</th><th>Wann verwenden</th></tr></thead>
       <tbody>
         <tr><td>Pricing Calculator</td><td>Monatliche Kosten einer Architektur vor der Umsetzung schätzen</td></tr>
-        <tr><td>Budgets</td><td>Kostenlimit setzen – E-Mail-Benachrichtigung bei Überschreitung oder Prognose</td></tr>
+        <tr><td>Budgets</td><td>Kostenlimit setzen - Benachrichtigung bei Überschreitung oder Prognose</td></tr>
         <tr><td>Cost Explorer</td><td>Aktuelle Rechnungen grafisch analysieren, kostentreibende Dienste identifizieren</td></tr>
+        <tr><td>Cost and Usage Report (CUR)</td><td>Detailliertester Kostenbericht auf Ressourcenebene - wird als CSV/Parquet in S3 exportiert und mit BI-Tools analysiert</td></tr>
+        <tr><td>Cost Anomaly Detection</td><td>Unerwartete Kostensteigerungen automatisch erkennen</td></tr>
+        <tr><td>Savings Plans</td><td>Flexible taahhütbasierte Rabatte für Compute/EC2</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Consolidated Billing</h3>
+    <p>Alle Rechnungen der Konten unter AWS Organizations werden in einem einzigen Konto zusammengefasst. Dadurch werden Mengenrabatte (Volume Discounts) erzielt. Reserved Instance-Ersparnisse können kontoübergreifend geteilt werden.</p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ABSCHNITT 15 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 15 - AWS Support-Pläne</div>
+    <table>
+      <thead><tr><th>Plan</th><th>Preis</th><th>Reaktionszeit (Kritisch)</th><th>Merkmale</th></tr></thead>
+      <tbody>
+        <tr><td>Basic</td><td>Kostenlos</td><td>-</td><td>Dokumentation, Foren, 6 Trusted Advisor-Prüfungen</td></tr>
+        <tr><td>Developer</td><td>~$29/Monat</td><td>Geschäftszeiten</td><td>E-Mail-Support, 1 Person</td></tr>
+        <tr><td>Business</td><td>~$100/Monat</td><td>&lt; 1 Stunde</td><td>24/7 Telefon + Chat, alle Trusted Advisor-Prüfungen</td></tr>
+        <tr><td>Enterprise</td><td>~$15.000/Monat</td><td>&lt; 15 Minuten</td><td>TAM (Technical Account Manager), Concierge-Support</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- ABSCHNITT 16 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 16 - Well-Architected Framework</div>
+    <p class="section-intro">6 Säulen für eine gut konzipierte AWS-Architektur.</p>
+    <table>
+      <thead><tr><th>Säule</th><th>Fokus</th></tr></thead>
+      <tbody>
+        <tr><td>Operational Excellence</td><td>Prozesse automatisieren, kontinuierlich verbessern</td></tr>
+        <tr><td>Security</td><td>Identitätsmanagement, Datenschutz, Überwachung</td></tr>
+        <tr><td>Reliability</td><td>Fehlerwiederherstellung, horizontale Skalierung</td></tr>
+        <tr><td>Performance Efficiency</td><td>Richtige Ressourcenwahl, Performance-Monitoring</td></tr>
+        <tr><td>Cost Optimization</td><td>Unnötige Ausgaben vermeiden, nutzungsbasiert zahlen</td></tr>
+        <tr><td>Sustainability</td><td>Energieeffizienz, CO2-Fußabdruck reduzieren</td></tr>
       </tbody>
     </table>
   </div>
@@ -517,16 +721,46 @@
 
   <!-- GOLDEN FORMULAS -->
   <div class="section">
-    <div class="section-title">5 Goldene Formeln - Direkt zur richtigen Antwort</div>
-    <p class="section-intro">Sobald diese Schlüsselwörter in der Prüfungsfrage erscheinen, ist die Antwort eindeutig:</p>
+    <div class="section-title">Schlüsselwort-Tabelle - Direkt zur richtigen Antwort</div>
+    <p class="section-intro">Sobald diese Begriffe in der Prüfungsfrage erscheinen, ist die Antwort eindeutig:</p>
     <table class="golden-table">
       <thead><tr><th>Wenn in der Frage steht...</th><th>Richtige Antwort</th></tr></thead>
       <tbody>
         <tr><td>Infrastructure as Code / YAML / JSON Template</td><td>CloudFormation</td></tr>
         <tr><td>Minimum management overhead / Just upload code</td><td>Elastic Beanstalk</td></tr>
         <tr><td>Audit user activity / Who deleted the resource</td><td>CloudTrail</td></tr>
-        <tr><td>DDoS attack mitigation / Layer 3 and Layer 4 protection</td><td>Shield</td></tr>
+        <tr><td>DDoS attack mitigation / Layer 3 and Layer 4</td><td>Shield</td></tr>
         <tr><td>Compliance reports / ISO certificates download</td><td>Artifact</td></tr>
+        <tr><td>Serverless container / No server management</td><td>Fargate</td></tr>
+        <tr><td>Sensitive data in S3 / PII detection</td><td>Macie</td></tr>
+        <tr><td>Encryption key management</td><td>KMS</td></tr>
+        <tr><td>Dedicated hardware HSM / bring your own key</td><td>CloudHSM</td></tr>
+        <tr><td>Global low latency / Static IP / TCP routing</td><td>Global Accelerator</td></tr>
+        <tr><td>Content caching / CDN / Edge delivery</td><td>CloudFront</td></tr>
+        <tr><td>Multiple accounts / single bill</td><td>Organizations + Consolidated Billing</td></tr>
+        <tr><td>Physical data transfer / no internet</td><td>Snow Family</td></tr>
+        <tr><td>Real-time threat detection / anomaly in logs</td><td>GuardDuty</td></tr>
+        <tr><td>Software vulnerability scanning / CVE</td><td>Inspector</td></tr>
+        <tr><td>Decouple components / message queue</td><td>SQS</td></tr>
+        <tr><td>Fan-out notification / one-to-many messaging</td><td>SNS</td></tr>
+        <tr><td>Serverless event routing / event bus</td><td>EventBridge</td></tr>
+        <tr><td>Managed CI/CD pipeline / automate deployments</td><td>CodePipeline</td></tr>
+        <tr><td>Distributed tracing / debug microservices</td><td>X-Ray</td></tr>
+        <tr><td>Query S3 data with SQL / no infrastructure</td><td>Athena</td></tr>
+        <tr><td>Real-time streaming / IoT data ingestion</td><td>Kinesis</td></tr>
+        <tr><td>BI dashboards / business intelligence</td><td>QuickSight</td></tr>
+        <tr><td>Managed Hadoop / Spark / big data cluster</td><td>EMR</td></tr>
+        <tr><td>Most detailed billing / resource-level cost</td><td>Cost and Usage Report (CUR)</td></tr>
+        <tr><td>Set spending alert / budget threshold</td><td>Budgets</td></tr>
+        <tr><td>Analyze past spending / cost trends</td><td>Cost Explorer</td></tr>
+        <tr><td>Cloud adoption strategy / 6 perspectives</td><td>AWS CAF</td></tr>
+        <tr><td>Ultra-low latency in city / gaming / live stream</td><td>Local Zones</td></tr>
+        <tr><td>AWS hardware in on-premises datacenter</td><td>Outposts</td></tr>
+        <tr><td>User sign-up/sign-in for app / social login</td><td>Cognito</td></tr>
+        <tr><td>Rotate database credentials automatically</td><td>Secrets Manager</td></tr>
+        <tr><td>SSL/TLS certificate provisioning</td><td>ACM</td></tr>
+        <tr><td>Patch fleet of EC2 / run commands at scale</td><td>Systems Manager</td></tr>
+        <tr><td>Multi-account guardrails / landing zone</td><td>Control Tower</td></tr>
       </tbody>
     </table>
   </div>

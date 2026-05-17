@@ -435,12 +435,14 @@
       </tbody>
     </table>
 
-    <h3>EBS / EFS / Storage Gateway</h3>
+    <h3>EBS / EFS / FSx / Storage Gateway</h3>
     <table>
       <thead><tr><th>Dienst</th><th>Typ</th><th>Wichtiger Unterschied</th></tr></thead>
       <tbody>
-        <tr><td>EBS</td><td>Block Storage</td><td>Virtuelle Festplatte, die an genau eine EC2-Instanz angehängt wird</td></tr>
+        <tr><td>EBS</td><td>Block Storage</td><td>Virtuelle Festplatte, die an genau eine EC2-Instanz angehängt wird (gleiche AZ)</td></tr>
         <tr><td>EFS</td><td>File Storage</td><td>Kann gleichzeitig von Hunderten EC2-Instanzen genutzt werden (nur Linux)</td></tr>
+        <tr><td>FSx for Windows</td><td>File Storage</td><td>Windows SMB-Protokoll, Active Directory-Integration</td></tr>
+        <tr><td>FSx for Lustre</td><td>File Storage</td><td>Hochleistungsrechnen (HPC), Machine Learning, Videoverarbeitung</td></tr>
         <tr><td>Storage Gateway</td><td>Hybrid</td><td>Verbindet On-Premise-Server mit AWS S3 als Brücke</td></tr>
       </tbody>
     </table>

@@ -5,7 +5,7 @@ A clean, searchable study guide for the AWS Certified Cloud Practitioner (CLF-C0
 
 ## Features
 
-- Full-text search across questions and answers - results show original question numbers
+- Full-text search across questions and answers
 - Show / hide answers toggle (state persists across refreshes)
 - Probeprufungen section with 6 EN and 6 DE practice exam links (collapsible dropdown)
 - Scroll position restored on refresh

@@ -187,18 +187,50 @@
 
     .exams-section {
       max-width: 860px;
-      margin: 20px auto 0;
+      margin: 16px auto 0;
       padding: 0 16px;
     }
 
-    .exams-section h2 {
+    .exams-toggle {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: #0f1623;
+      border: 1px solid #1a2236;
+      border-radius: 10px;
+      padding: 10px 16px;
+      cursor: pointer;
+      user-select: none;
+      transition: border-color 0.15s;
+      width: 100%;
+      text-align: left;
+    }
+
+    .exams-toggle:hover { border-color: #fbbf24; }
+
+    .exams-toggle-label {
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: #fbbf24;
-      margin-bottom: 12px;
+      flex: 1;
     }
+
+    .exams-toggle-arrow {
+      font-size: 10px;
+      color: #3d4f6b;
+      transition: transform 0.2s;
+    }
+
+    .exams-toggle.open .exams-toggle-arrow { transform: rotate(180deg); }
+
+    .exams-body {
+      display: none;
+      padding: 14px 4px 4px;
+    }
+
+    .exams-body.open { display: block; }
 
     .exams-grid {
       display: grid;
@@ -265,25 +297,30 @@
 </header>
 
 <section class="exams-section">
-  <h2>Übungsprüfungen</h2>
-  <div class="exams-grid">
-    <div class="exams-col">
-      <h3>English</h3>
-      <a class="exam-link" href="https://forms.gle/ZSrg2WKKwZjXJWRs9" target="_blank" rel="noopener">AWS CCP EXAM 1 EN</a>
-      <a class="exam-link" href="https://forms.gle/m41d2uf1rf7KgUdj8" target="_blank" rel="noopener">AWS CCP EXAM 2 EN</a>
-      <a class="exam-link" href="https://forms.gle/7sMAdMcpUJ9a7mwt5" target="_blank" rel="noopener">AWS CCP EXAM 3 EN</a>
-      <a class="exam-link" href="https://forms.gle/prrQjRtT7ve9y2WZ7" target="_blank" rel="noopener">AWS CCP EXAM 4 EN</a>
-      <a class="exam-link" href="https://forms.gle/F3pnVAbEXjyMdtwb7" target="_blank" rel="noopener">AWS CCP EXAM 5 EN</a>
-      <a class="exam-link" href="https://forms.gle/SUC9U9NncuhBgA3v6" target="_blank" rel="noopener">AWS CCP EXAM 6 EN</a>
-    </div>
-    <div class="exams-col">
-      <h3>Deutsch</h3>
-      <a class="exam-link" href="https://forms.gle/Smegdq3MSsEU3zMA8" target="_blank" rel="noopener">AWS CCP EXAM 1 DE</a>
-      <a class="exam-link" href="https://forms.gle/gsVQxLHStn7HExPG8" target="_blank" rel="noopener">AWS CCP EXAM 2 DE</a>
-      <a class="exam-link" href="https://forms.gle/8b1WRevJtvNUAgdQ7" target="_blank" rel="noopener">AWS CCP EXAM 3 DE</a>
-      <a class="exam-link" href="https://forms.gle/H4Nj7Kg3oL7H5s5AA" target="_blank" rel="noopener">AWS CCP EXAM 4 DE</a>
-      <a class="exam-link" href="https://forms.gle/qbNt4S6N13yd6FM16" target="_blank" rel="noopener">AWS CCP EXAM 5 DE</a>
-      <a class="exam-link" href="https://forms.gle/Tmcy3ZV8hmmZtEvP9" target="_blank" rel="noopener">AWS CCP EXAM 6 DE</a>
+  <button class="exams-toggle" onclick="toggleExams(this)">
+    <span class="exams-toggle-label">Übungsprüfungen</span>
+    <span class="exams-toggle-arrow">▼</span>
+  </button>
+  <div class="exams-body">
+    <div class="exams-grid">
+      <div class="exams-col">
+        <h3>English</h3>
+        <a class="exam-link" href="https://forms.gle/ZSrg2WKKwZjXJWRs9" target="_blank" rel="noopener">AWS CCP EXAM 1 EN</a>
+        <a class="exam-link" href="https://forms.gle/m41d2uf1rf7KgUdj8" target="_blank" rel="noopener">AWS CCP EXAM 2 EN</a>
+        <a class="exam-link" href="https://forms.gle/7sMAdMcpUJ9a7mwt5" target="_blank" rel="noopener">AWS CCP EXAM 3 EN</a>
+        <a class="exam-link" href="https://forms.gle/prrQjRtT7ve9y2WZ7" target="_blank" rel="noopener">AWS CCP EXAM 4 EN</a>
+        <a class="exam-link" href="https://forms.gle/F3pnVAbEXjyMdtwb7" target="_blank" rel="noopener">AWS CCP EXAM 5 EN</a>
+        <a class="exam-link" href="https://forms.gle/SUC9U9NncuhBgA3v6" target="_blank" rel="noopener">AWS CCP EXAM 6 EN</a>
+      </div>
+      <div class="exams-col">
+        <h3>Deutsch</h3>
+        <a class="exam-link" href="https://forms.gle/Smegdq3MSsEU3zMA8" target="_blank" rel="noopener">AWS CCP EXAM 1 DE</a>
+        <a class="exam-link" href="https://forms.gle/gsVQxLHStn7HExPG8" target="_blank" rel="noopener">AWS CCP EXAM 2 DE</a>
+        <a class="exam-link" href="https://forms.gle/8b1WRevJtvNUAgdQ7" target="_blank" rel="noopener">AWS CCP EXAM 3 DE</a>
+        <a class="exam-link" href="https://forms.gle/H4Nj7Kg3oL7H5s5AA" target="_blank" rel="noopener">AWS CCP EXAM 4 DE</a>
+        <a class="exam-link" href="https://forms.gle/qbNt4S6N13yd6FM16" target="_blank" rel="noopener">AWS CCP EXAM 5 DE</a>
+        <a class="exam-link" href="https://forms.gle/Tmcy3ZV8hmmZtEvP9" target="_blank" rel="noopener">AWS CCP EXAM 6 DE</a>
+      </div>
     </div>
   </div>
 </section>
@@ -396,6 +433,11 @@
         answers.some(a => a.toLowerCase().includes(q));
     }));
   });
+
+  function toggleExams(btn) {
+    btn.classList.toggle("open");
+    btn.nextElementSibling.classList.toggle("open");
+  }
 
   load();
 </script>

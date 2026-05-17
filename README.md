@@ -1,25 +1,20 @@
 # AWS CCP EXAM DE 2026 - Study Guide (German)
 
 A clean, searchable study guide for the AWS Certified Cloud Practitioner (CLF-C02) exam.
-**382 questions** with correct answers only - no explanations, no wrong answers, no distractions.
-
-## How it works
-
-Questions and answers are stored in a static `questions.json` file (parsed from a 700-page German Markdown source with a custom Node.js script). The page fetches this file on load and renders everything client-side with vanilla JS - no framework, no build step.
-
-The parser handles:
-- Single-answer and multi-answer questions (98 questions have 2-3 correct answers)
-- Inline "Option - explanation" answer formats
-- Markdown escape character normalization
-- All 484 answers verified to be verbatim from the source
+**390 questions** with correct answers only - no explanations, no wrong answers, no distractions.
 
 ## Features
 
-- Full-text search across questions and answers
+- Full-text search across questions and answers - results show original question numbers
 - Show / hide answers toggle (state persists across refreshes)
+- Probeprufungen section with 6 EN and 6 DE practice exam links (collapsible dropdown)
 - Scroll position restored on refresh
 - Dark UI, mobile friendly
 - No login, no tracking, no ads
+
+## How it works
+
+Questions and answers are stored in a static `questions.json` file (parsed from a German Markdown source with a custom Node.js script). The page fetches this file on load and renders everything client-side with vanilla JS - no framework, no build step.
 
 ## Stack
 
@@ -36,25 +31,20 @@ Connected to GitHub. Every push to `main` triggers an automatic Vercel deploymen
 # AWS CCP EXAM DE 2026 - Lernhilfe (Deutsch)
 
 Eine ubersichtliche, durchsuchbare Lernhilfe fur die AWS Certified Cloud Practitioner (CLF-C02) Prufung.
-**382 Fragen** mit den richtigen Antworten - keine Erklarungen, keine falschen Antworten, kein Ablenkung.
-
-## Wie es funktioniert
-
-Fragen und Antworten sind in einer statischen `questions.json` Datei gespeichert (geparst aus einer 700-seitigen deutschen Markdown-Quelle mit einem Node.js-Skript). Die Seite ladt diese Datei beim Start und rendert alles client-seitig mit vanilla JS - kein Framework, kein Build-Schritt.
-
-Der Parser verarbeitet:
-- Einzel- und Mehrfachantworten (98 Fragen haben 2-3 richtige Antworten)
-- "Option - Erklarung" Antwortformate in einer Zeile
-- Markdown-Escape-Zeichen Normalisierung
-- Alle 484 Antworten wurden wortwortlich aus der Quelle verifiziert
+**390 Fragen** mit den richtigen Antworten - keine Erklarungen, keine falschen Antworten, keine Ablenkung.
 
 ## Funktionen
 
-- Volltextsuche uber Fragen und Antworten
+- Volltextsuche uber Fragen und Antworten - Ergebnisse zeigen die originale Fragennummer
 - Antworten ein-/ausblenden (Zustand bleibt nach Neuladen erhalten)
+- Probeprufungen-Bereich mit 6 EN und 6 DE Ubungsprufungen als ausklappbares Dropdown
 - Scrollposition wird nach Neuladen wiederhergestellt
 - Dunkles UI, mobilfreundlich
 - Kein Login, kein Tracking, keine Werbung
+
+## Wie es funktioniert
+
+Fragen und Antworten sind in einer statischen `questions.json` Datei gespeichert (geparst aus einer deutschen Markdown-Quelle mit einem Node.js-Skript). Die Seite ladt diese Datei beim Start und rendert alles client-seitig mit vanilla JS - kein Framework, kein Build-Schritt.
 
 ## Technologie
 

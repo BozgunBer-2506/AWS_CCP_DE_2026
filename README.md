@@ -55,3 +55,7 @@ Fragen und Antworten sind in einer statischen `questions.json` Datei gespeichert
 ## Deployment
 
 Mit GitHub verbunden. Jeder Push auf `main` lost ein automatisches Vercel-Deployment aus.
+
+## Hinweis
+
+Die Probeprufungen gehoren dem Syntax-Institut. Die Antworten werden direkt an das Syntax-Institut ubermittelt. Die Prufungen sind ausschliesslich fur Kursteilnehmer bestimmt und nicht Open Source.

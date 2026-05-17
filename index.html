@@ -247,6 +247,40 @@
 
     .exams-toggle.open .exams-toggle-arrow { transform: rotate(180deg); }
 
+    .exams-info {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .exams-info-icon {
+      font-size: 12px;
+      color: #3d4f6b;
+      cursor: default;
+      line-height: 1;
+    }
+
+    .exams-info-icon:hover { color: #fbbf24; }
+
+    .exams-tooltip {
+      display: none;
+      position: absolute;
+      bottom: calc(100% + 8px);
+      right: 0;
+      width: 260px;
+      background: #131929;
+      border: 1px solid #1e2d45;
+      border-radius: 8px;
+      padding: 10px 12px;
+      font-size: 11px;
+      color: #94a3b8;
+      line-height: 1.6;
+      z-index: 100;
+      pointer-events: none;
+    }
+
+    .exams-info:hover .exams-tooltip { display: block; }
+
     .exams-body {
       display: none;
       padding: 14px 4px 4px;
@@ -326,6 +360,10 @@
 <section class="exams-section">
   <button class="exams-toggle" onclick="toggleExams(this)">
     <span class="exams-toggle-label">Probeprüfungen</span>
+    <span class="exams-info" onclick="event.stopPropagation()">
+      <span class="exams-info-icon">ⓘ</span>
+      <span class="exams-tooltip">Die Probeprüfungen gehören dem Syntax-Institut. Die Antworten werden direkt an das Syntax-Institut übermittelt. Ausschließlich für Kursteilnehmer bestimmt.</span>
+    </span>
     <span class="exams-toggle-arrow">▼</span>
   </button>
   <div class="exams-body">

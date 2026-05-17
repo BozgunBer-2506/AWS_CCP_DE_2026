@@ -185,6 +185,55 @@
 
     body.answers-hidden .q-answers { visibility: hidden; }
 
+    .exams-section {
+      max-width: 860px;
+      margin: 20px auto 0;
+      padding: 0 16px;
+    }
+
+    .exams-section h2 {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #fbbf24;
+      margin-bottom: 12px;
+    }
+
+    .exams-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+    }
+
+    .exams-col h3 {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #3d4f6b;
+      margin-bottom: 8px;
+    }
+
+    .exam-link {
+      display: block;
+      padding: 8px 12px;
+      margin-bottom: 6px;
+      background: #0f1623;
+      border: 1px solid #1a2236;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 500;
+      color: #c8d3e8;
+      text-decoration: none;
+      transition: border-color 0.15s, color 0.15s;
+    }
+
+    .exam-link:hover {
+      border-color: #fbbf24;
+      color: #fbbf24;
+    }
+
     footer {
       border-top: 1px solid #1a2236;
       padding: 24px 16px;
@@ -214,6 +263,30 @@
     <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 11V3M3 6l4-4 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
   </button>
 </header>
+
+<section class="exams-section">
+  <h2>Deneme Sınavları</h2>
+  <div class="exams-grid">
+    <div class="exams-col">
+      <h3>English</h3>
+      <a class="exam-link" href="https://forms.gle/ZSrg2WKKwZjXJWRs9" target="_blank" rel="noopener">AWS CCP EXAM 1 EN</a>
+      <a class="exam-link" href="https://forms.gle/m41d2uf1rf7KgUdj8" target="_blank" rel="noopener">AWS CCP EXAM 2 EN</a>
+      <a class="exam-link" href="https://forms.gle/7sMAdMcpUJ9a7mwt5" target="_blank" rel="noopener">AWS CCP EXAM 3 EN</a>
+      <a class="exam-link" href="https://forms.gle/prrQjRtT7ve9y2WZ7" target="_blank" rel="noopener">AWS CCP EXAM 4 EN</a>
+      <a class="exam-link" href="https://forms.gle/F3pnVAbEXjyMdtwb7" target="_blank" rel="noopener">AWS CCP EXAM 5 EN</a>
+      <a class="exam-link" href="https://forms.gle/SUC9U9NncuhBgA3v6" target="_blank" rel="noopener">AWS CCP EXAM 6 EN</a>
+    </div>
+    <div class="exams-col">
+      <h3>Deutsch</h3>
+      <a class="exam-link" href="https://forms.gle/Smegdq3MSsEU3zMA8" target="_blank" rel="noopener">AWS CCP EXAM 1 DE</a>
+      <a class="exam-link" href="https://forms.gle/gsVQxLHStn7HExPG8" target="_blank" rel="noopener">AWS CCP EXAM 2 DE</a>
+      <a class="exam-link" href="https://forms.gle/8b1WRevJtvNUAgdQ7" target="_blank" rel="noopener">AWS CCP EXAM 3 DE</a>
+      <a class="exam-link" href="https://forms.gle/H4Nj7Kg3oL7H5s5AA" target="_blank" rel="noopener">AWS CCP EXAM 4 DE</a>
+      <a class="exam-link" href="https://forms.gle/qbNt4S6N13yd6FM16" target="_blank" rel="noopener">AWS CCP EXAM 5 DE</a>
+      <a class="exam-link" href="https://forms.gle/Tmcy3ZV8hmmZtEvP9" target="_blank" rel="noopener">AWS CCP EXAM 6 DE</a>
+    </div>
+  </div>
+</section>
 
 <main id="list"></main>
 

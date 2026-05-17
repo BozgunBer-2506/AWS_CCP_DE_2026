@@ -360,7 +360,7 @@
 
   async function load() {
     const res = await fetch("./questions.json");
-    allQuestions = await res.json();
+    allQuestions = (await res.json()).map((q, i) => ({ ...q, _idx: i + 1 }));
     const savedSearch = sessionStorage.getItem("search") || "";
     if (savedSearch) {
       document.getElementById("search").value = savedSearch;
@@ -392,7 +392,7 @@
       const badges = answers.map(a => `<div class="q-answer">${escHtml(a)}</div>`).join("");
       return `
         <div class="question-card">
-          <div class="q-num">Frage ${i + 1}</div>
+          <div class="q-num">Frage ${q._idx}</div>
           <div class="q-text">${escHtml(q.question)}</div>
           <div class="q-answers">${badges}</div>
         </div>

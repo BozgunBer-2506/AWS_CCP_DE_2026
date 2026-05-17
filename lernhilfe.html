@@ -1,0 +1,544 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AWS CCP 2026 - Lernhilfe</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: #0f1117;
+      color: #e2e8f0;
+      min-height: 100vh;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(11,15,26,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid #1a2236;
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      z-index: 10;
+    }
+
+    header h1 { font-size: 14px; font-weight: 700; color: #f1f5f9; white-space: nowrap; }
+    header h1 span { color: #fbbf24; }
+
+    .back-btn {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: #0f1623;
+      border: 1px solid #1e2d45;
+      border-radius: 8px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 600;
+      color: #c8d3e8;
+      text-decoration: none;
+      transition: border-color 0.15s;
+      white-space: nowrap;
+    }
+    .back-btn:hover { border-color: #fbbf24; color: #fbbf24; }
+
+    main {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 32px 16px 80px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 40px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid #1a2236;
+    }
+
+    .hero h2 {
+      font-size: 26px;
+      font-weight: 800;
+      color: #f1f5f9;
+      margin-bottom: 8px;
+    }
+
+    .hero h2 span { color: #fbbf24; }
+
+    .hero p {
+      font-size: 13px;
+      color: #4a5f80;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #fbbf24;
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid #1a2236;
+    }
+
+    .section-intro {
+      font-size: 13px;
+      color: #6b7f99;
+      margin-bottom: 16px;
+      line-height: 1.7;
+    }
+
+    h3 {
+      font-size: 14px;
+      font-weight: 700;
+      color: #c8d3e8;
+      margin: 20px 0 10px;
+    }
+
+    p {
+      font-size: 13px;
+      color: #8a9ab8;
+      line-height: 1.8;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      margin-bottom: 16px;
+    }
+
+    ul li {
+      font-size: 13px;
+      color: #8a9ab8;
+      line-height: 1.7;
+      padding: 4px 0 4px 16px;
+      position: relative;
+    }
+
+    ul li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: #fbbf24;
+    }
+
+    ul li strong { color: #c8d3e8; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 13px;
+    }
+
+    thead tr {
+      background: #0a0f1c;
+    }
+
+    thead th {
+      text-align: left;
+      padding: 10px 14px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: #fbbf24;
+      border-bottom: 1px solid #1a2236;
+    }
+
+    tbody tr {
+      border-bottom: 1px solid #131929;
+      transition: background 0.1s;
+    }
+
+    tbody tr:hover { background: #0f1623; }
+
+    tbody td {
+      padding: 10px 14px;
+      color: #8a9ab8;
+      line-height: 1.6;
+      vertical-align: top;
+    }
+
+    tbody td:first-child {
+      color: #c8d3e8;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .tip {
+      background: #0a1020;
+      border-left: 3px solid #fbbf24;
+      border-radius: 0 8px 8px 0;
+      padding: 12px 16px;
+      margin: 12px 0 20px;
+      font-size: 13px;
+      color: #8a9ab8;
+      line-height: 1.7;
+    }
+
+    .tip strong { color: #fbbf24; }
+
+    .divider {
+      border: none;
+      border-top: 1px solid #1a2236;
+      margin: 32px 0;
+    }
+
+    .golden-table tbody td:first-child {
+      color: #8a9ab8;
+      font-weight: 400;
+      font-style: italic;
+    }
+
+    .golden-table tbody td:last-child {
+      color: #fbbf24;
+      font-weight: 700;
+    }
+
+    #scroll-top {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: #0f1623;
+      border: 1px solid #1e2d45;
+      border-radius: 50%;
+      color: #fbbf24;
+      cursor: pointer;
+      position: fixed;
+      bottom: 24px;
+      left: 20px;
+      z-index: 20;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+      transition: border-color 0.15s;
+    }
+    #scroll-top:hover { border-color: #fbbf24; }
+    #scroll-top.visible { display: flex; }
+
+    code {
+      background: #131929;
+      border: 1px solid #1e2d45;
+      border-radius: 4px;
+      padding: 1px 6px;
+      font-size: 12px;
+      color: #fbbf24;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>AWS CCP <span>2026</span></h1>
+  <a href="index.html" class="back-btn">
+    ← Zurück zur Fragenliste
+  </a>
+</header>
+
+<button id="scroll-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Nach oben">
+  <svg width="12" height="12" viewBox="0 0 14 14" fill="none"><path d="M7 11V3M3 6l4-4 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+
+<main>
+
+  <div class="hero">
+    <h2>AWS Certified Cloud Practitioner <span>CLF-C02</span></h2>
+    <p>Strukturierte Lernhilfe für die Prüfungsvorbereitung</p>
+  </div>
+
+  <!-- BÖLÜM 1 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 1 - AWS Globale Infrastruktur</div>
+    <p class="section-intro">Die AWS-Infrastruktur ist geografisch hierarchisch aufgebaut. In der Prüfung werden diese Definitionen gezielt abgefragt.</p>
+
+    <h3>Regions (Regionen)</h3>
+    <p>Geografisch voneinander vollständig isolierte Bereiche, die weltweit verteilt sind. Beispiele: <code>us-east-1</code> (N. Virginia), <code>eu-central-1</code> (Frankfurt)</p>
+    <p>Alle Regionen sind über das private Hochgeschwindigkeits-Glasfasernetz von AWS miteinander verbunden.</p>
+
+    <p><strong style="color:#c8d3e8">4 Kriterien bei der Regionswahl (prüfungsrelevant):</strong></p>
+    <table>
+      <thead><tr><th>#</th><th>Kriterium</th><th>Erklärung</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Data Sovereignty / Compliance</td><td>Manche Gesetze verbieten, dass Daten das Land verlassen (z.B. Deutschland)</td></tr>
+        <tr><td>2</td><td>Proximity / Latency</td><td>Server sollte in der Region geöffnet werden, die den Nutzern am nächsten ist</td></tr>
+        <tr><td>3</td><td>Available Services</td><td>Neue Dienste sind nicht sofort in allen Regionen verfügbar</td></tr>
+        <tr><td>4</td><td>Pricing</td><td>Preise variieren je nach Region aufgrund von Steuern und Stromkosten</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Availability Zones (AZ)</h3>
+    <p>Physisch isolierte Rechenzentren innerhalb einer Region, verbunden über ultraschnelle Glasfaserleitungen mit eigener Strom- und Netzwerkinfrastruktur.</p>
+    <ul>
+      <li>Jede Region hat <strong>mindestens 3 AZs</strong></li>
+      <li>Werden Anwendungen auf mehrere AZs verteilt, läuft der Betrieb weiter, auch wenn ein Rechenzentrum ausfällt</li>
+      <li>Dies nennt sich <strong>High Availability</strong> und <strong>Fault Tolerance</strong></li>
+    </ul>
+
+    <h3>Edge Locations</h3>
+    <p>Kleine Verteilungspunkte in Metropolen weltweit, die Inhalte durch <strong>Caching</strong> möglichst nah am Endnutzer bereitstellen.</p>
+    <p>Genutzt von: <strong>Amazon CloudFront</strong> (CDN), <strong>Amazon Route 53</strong> (DNS)</p>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- BÖLÜM 2 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 2 - Compute-Dienste</div>
+
+    <h3>Amazon EC2</h3>
+    <p>Virtuelle Server in der Cloud, die in Sekunden gestartet werden können (IaaS). Betriebssystem, Festplatte und RAM werden selbst gewählt.</p>
+
+    <p><strong style="color:#c8d3e8">EC2-Kaufmodelle (häufig in der Prüfung):</strong></p>
+    <table>
+      <thead><tr><th>Modell</th><th>Wann verwenden</th><th>Kosten</th></tr></thead>
+      <tbody>
+        <tr><td>On-Demand</td><td>Kurzfristig, unregelmäßiger Traffic, Tests ohne Unterbrechungstoleranz</td><td>Normalpreis</td></tr>
+        <tr><td>Savings Plans / Reserved</td><td>Dauerhaft laufende Server mit vorhersehbarem Traffic (1 oder 3 Jahre Laufzeit)</td><td>Bis zu 72% Rabatt</td></tr>
+        <tr><td>Spot Instances</td><td>Aufgaben, die Unterbrechungen tolerieren (Big Data, Video-Rendering, Batch)</td><td>Bis zu 90% Rabatt</td></tr>
+        <tr><td>Dedicated Hosts</td><td>Per-Core-Softwarelizenzen, strenge Compliance-Anforderungen</td><td>Teuerste Option</td></tr>
+      </tbody>
+    </table>
+
+    <div class="tip"><strong>Wichtig zu Spot Instances:</strong> AWS kann den Server jederzeit zurücknehmen und gibt dabei nur 2 Minuten Vorwarnung. Für das Hosting von Webseiten <strong>niemals</strong> geeignet.</div>
+
+    <h3>ECS / EKS / Fargate</h3>
+    <table>
+      <thead><tr><th>Dienst</th><th>Beschreibung</th></tr></thead>
+      <tbody>
+        <tr><td>ECS</td><td>AWS-eigener Docker-Container-Verwaltungsdienst</td></tr>
+        <tr><td>EKS</td><td>Verwalteter Kubernetes-Dienst auf AWS</td></tr>
+        <tr><td>Fargate</td><td>Serverloser Container-Motor für ECS/EKS – kein EC2-Management notwendig</td></tr>
+      </tbody>
+    </table>
+
+    <h3>AWS Lambda</h3>
+    <p>Ereignisgesteuerter (event-driven) Code-Ausführungsdienst ohne Serverkonzept.</p>
+    <ul>
+      <li>Kein dauerhaft laufender Server notwendig</li>
+      <li>Code wird bei einem Ereignis ausgelöst (z.B. Datei-Upload in S3), läuft durch (max. 15 Min.) und stoppt</li>
+      <li>Abrechnung erfolgt auf <strong>Millisekunden-Basis</strong></li>
+    </ul>
+
+    <h3>Elastic Beanstalk vs. CloudFormation</h3>
+    <table>
+      <thead><tr><th>Dienst</th><th>Kategorie</th><th>Funktion</th><th>Verwaltungsaufwand</th></tr></thead>
+      <tbody>
+        <tr><td>Elastic Beanstalk</td><td>PaaS</td><td>Code hochladen – den Rest erledigt AWS</td><td>Gering</td></tr>
+        <tr><td>CloudFormation</td><td>IaC</td><td>Gesamte Infrastruktur per JSON/YAML-Template automatisieren</td><td>Hoch (volle Kontrolle)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- BÖLÜM 3 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 3 - Speicherdienste (Storage)</div>
+
+    <h3>Amazon S3</h3>
+    <p>Objektorientierter Speicher (Object Storage) mit unbegrenzter Kapazität, zugänglich über das Internet. Daten werden in sogenannten "Buckets" gespeichert.</p>
+
+    <p><strong style="color:#c8d3e8">S3-Speicherklassen (prüfungsrelevant):</strong></p>
+    <table>
+      <thead><tr><th>Klasse</th><th>Verwendung</th><th>Zugriffszeit</th><th>Kosten</th></tr></thead>
+      <tbody>
+        <tr><td>Standard</td><td>Häufig abgerufene Daten</td><td>Sofort</td><td>Hoch</td></tr>
+        <tr><td>Standard-IA</td><td>Selten abgerufene Daten (wenige Male pro Monat)</td><td>Sofort</td><td>Speicher günstig, Abruf kostenpflichtig</td></tr>
+        <tr><td>One Zone-IA</td><td>Unkritische, wiederherstellbare Daten</td><td>Sofort</td><td>Günstiger (nur 1 AZ – Risiko)</td></tr>
+        <tr><td>Intelligent-Tiering</td><td>Unbekannte oder schwankende Zugriffshäufigkeit</td><td>Sofort</td><td>Automatisch optimiert</td></tr>
+        <tr><td>Glacier Instant</td><td>Archivdaten, wenige Male pro Jahr</td><td>Millisekunden</td><td>Günstig</td></tr>
+        <tr><td>Glacier Flexible</td><td>Archiv ohne Echtzeitbedarf</td><td>3–5 Stunden</td><td>Sehr günstig</td></tr>
+        <tr><td>Glacier Deep Archive</td><td>Gesetzliche Archive (1–2x jährlich)</td><td>Bis 12 Stunden</td><td>Günstigste Option</td></tr>
+      </tbody>
+    </table>
+
+    <h3>EBS / EFS / Storage Gateway</h3>
+    <table>
+      <thead><tr><th>Dienst</th><th>Typ</th><th>Wichtiger Unterschied</th></tr></thead>
+      <tbody>
+        <tr><td>EBS</td><td>Block Storage</td><td>Virtuelle Festplatte, die an genau eine EC2-Instanz angehängt wird</td></tr>
+        <tr><td>EFS</td><td>File Storage</td><td>Kann gleichzeitig von Hunderten EC2-Instanzen genutzt werden (nur Linux)</td></tr>
+        <tr><td>Storage Gateway</td><td>Hybrid</td><td>Verbindet On-Premise-Server mit AWS S3 als Brücke</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- BÖLÜM 4 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 4 - Datenbankdienste</div>
+    <table>
+      <thead><tr><th>Dienst</th><th>Typ</th><th>Verwendung</th></tr></thead>
+      <tbody>
+        <tr><td>RDS</td><td>SQL (Relational)</td><td>MySQL, PostgreSQL, MariaDB, Oracle, SQL Server</td></tr>
+        <tr><td>Aurora</td><td>SQL (AWS-eigene Engine)</td><td>5x schneller als MySQL, vollständig verwaltet</td></tr>
+        <tr><td>DynamoDB</td><td>NoSQL / Serverless</td><td>Spielergebnisse, Warenkörbe – Millisekunden-Latenz weltweit</td></tr>
+        <tr><td>Redshift</td><td>Data Warehouse</td><td>Analyse von Milliarden Datensätzen, BI-Berichte</td></tr>
+        <tr><td>ElastiCache</td><td>In-Memory (Redis/Memcached)</td><td>Häufige Datenbankabfragen im RAM zwischenspeichern</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- BÖLÜM 5 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 5 - Netzwerk & Content Delivery</div>
+
+    <h3>Amazon VPC</h3>
+    <p>Ein isoliertes, privates virtuelles Netzwerk innerhalb der AWS-Cloud.</p>
+    <table>
+      <thead><tr><th>Komponente</th><th>Funktion</th></tr></thead>
+      <tbody>
+        <tr><td>Public Subnet</td><td>Für Server, die über das Internet erreichbar sein sollen</td></tr>
+        <tr><td>Private Subnet</td><td>Für Datenbanken und interne Dienste ohne Internetzugang</td></tr>
+        <tr><td>Internet Gateway (IGW)</td><td>Das "Ausgangstor" des VPC ins Internet</td></tr>
+        <tr><td>NAT Gateway</td><td>Ermöglicht Private-Subnet-Servern einseitigen Internetzugang (z.B. für Updates)</td></tr>
+        <tr><td>VPC Peering</td><td>Sichere Verbindung zwischen zwei VPCs über das interne AWS-Netz</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Weitere Netzwerkdienste</h3>
+    <table>
+      <thead><tr><th>Dienst</th><th>Funktion</th></tr></thead>
+      <tbody>
+        <tr><td>CloudFront</td><td>Globales CDN über Edge Locations – Inhalte werden vom nächstgelegenen Punkt ausgeliefert</td></tr>
+        <tr><td>Route 53</td><td>Intelligentes DNS – Domain-Registrierung, geografisches Routing, Health Checks</td></tr>
+        <tr><td>Site-to-Site VPN</td><td>Verschlüsselter Tunnel zwischen Firmennetzwerk und AWS über das Internet (schnell einzurichten)</td></tr>
+        <tr><td>Direct Connect</td><td>Dedizierte physische Glasfaserleitung von der Firmenzentrale zu AWS (maximale Sicherheit und Bandbreite)</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- BÖLÜM 6 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 6 - Sicherheit & Identität</div>
+
+    <h3>AWS IAM</h3>
+    <p>Zentraler Sicherheitsdienst zur Verwaltung von Zugriffsrechten – <strong>global</strong> (nicht regionengebunden).</p>
+    <ul>
+      <li><strong>Least Privilege:</strong> Jeder Nutzer erhält nur die Mindestrechte, die für seine Aufgabe notwendig sind</li>
+      <li><strong>MFA:</strong> Zusätzlich zum Passwort sollte immer eine Zwei-Faktor-Authentifizierung aktiviert sein</li>
+      <li><strong>Root User:</strong> Darf für den Alltag <strong>niemals</strong> verwendet werden – sperren und einen IAM-Admin-Nutzer anlegen</li>
+    </ul>
+
+    <h3>Sicherheitsdienste im Überblick</h3>
+    <table>
+      <thead><tr><th>Dienst</th><th>Funktion</th></tr></thead>
+      <tbody>
+        <tr><td>Cognito</td><td>Anmeldung (Sign-in/Sign-up) für Endnutzer einer Anwendung (inkl. Google, Facebook Federation)</td></tr>
+        <tr><td>Organizations</td><td>Verwaltung vieler AWS-Konten unter einem Dach (Consolidated Billing, SCPs)</td></tr>
+        <tr><td>Shield</td><td>DDoS-Schutz (Standard: kostenlos / Advanced: kostenpflichtig mit Schutzgarantie)</td></tr>
+        <tr><td>WAF</td><td>Web Application Firewall – blockiert Layer-7-Angriffe wie SQL Injection</td></tr>
+        <tr><td>GuardDuty</td><td>KI-gestützte Bedrohungserkennung auf Basis von VPC-, S3- und CloudTrail-Logs</td></tr>
+        <tr><td>Inspector</td><td>Scannt EC2-Instanzen und Container auf Sicherheitslücken und veraltete Pakete</td></tr>
+        <tr><td>Artifact</td><td>Kostenloses Abrufen von ISO-, PCI-DSS- und SOC-Zertifikaten von AWS</td></tr>
+        <tr><td>Secrets Manager</td><td>Verschlüsseltes Speichern von DB-Passwörtern und API-Schlüsseln mit automatischer Rotation</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- BÖLÜM 7 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 7 - Management & Überwachung</div>
+    <table>
+      <thead><tr><th>Dienst</th><th>Frage</th><th>Funktion</th></tr></thead>
+      <tbody>
+        <tr><td>CloudWatch</td><td>Wie läuft die Performance?</td><td>CPU, RAM, Netzwerk-Metriken – Alarme und Auto Scaling auslösen</td></tr>
+        <tr><td>CloudTrail</td><td>Wer hat was getan?</td><td>Protokolliert alle Nutzeraktivitäten und API-Aufrufe (Audit-Log)</td></tr>
+        <tr><td>Config</td><td>Hat sich die Konfiguration geändert?</td><td>Speichert Konfigurationsverlauf, prüft Compliance</td></tr>
+        <tr><td>Trusted Advisor</td><td>Ist das Konto optimiert?</td><td>Empfehlungen zu Kosten, Sicherheit, Fehlertoleranz, Performance und Service-Limits</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- BÖLÜM 8 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 8 - KI & Machine Learning</div>
+    <table>
+      <thead><tr><th>Dienst</th><th>Funktion</th></tr></thead>
+      <tbody>
+        <tr><td>Transcribe</td><td>Sprache → Text (Speech-to-Text)</td></tr>
+        <tr><td>Polly</td><td>Text → Sprache (Text-to-Speech)</td></tr>
+        <tr><td>Translate</td><td>Textübersetzung zwischen Sprachen</td></tr>
+        <tr><td>Rekognition</td><td>Gesichts-, Objekt- und Inhaltserkennung in Bildern/Videos</td></tr>
+        <tr><td>Lex</td><td>Chatbot-Engine für Sprach- und Texteingabe</td></tr>
+        <tr><td>SageMaker</td><td>Plattform zum Entwickeln, Trainieren und Deployen von ML-Modellen</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- BÖLÜM 9 -->
+  <div class="section">
+    <div class="section-title">Abschnitt 9 - Cloud-Wirtschaft & Kostentools</div>
+
+    <h3>CapEx vs. OpEx</h3>
+    <table>
+      <thead><tr><th></th><th>CapEx</th><th>OpEx</th></tr></thead>
+      <tbody>
+        <tr><td>Was?</td><td>Serverkauf, hohe Anfangsinvestition</td><td>Nutzungsbasierte Zahlung (AWS-Modell)</td></tr>
+        <tr><td>Flexibilität</td><td>Gering</td><td>Hoch</td></tr>
+        <tr><td>Vorabinvestition</td><td>Hoch</td><td>Keine</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Kostentools</h3>
+    <table>
+      <thead><tr><th>Tool</th><th>Wann verwenden</th></tr></thead>
+      <tbody>
+        <tr><td>Pricing Calculator</td><td>Monatliche Kosten einer Architektur vor der Umsetzung schätzen</td></tr>
+        <tr><td>Budgets</td><td>Kostenlimit setzen – E-Mail-Benachrichtigung bei Überschreitung oder Prognose</td></tr>
+        <tr><td>Cost Explorer</td><td>Aktuelle Rechnungen grafisch analysieren, kostentreibende Dienste identifizieren</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="divider" />
+
+  <!-- GOLDEN FORMULAS -->
+  <div class="section">
+    <div class="section-title">5 Goldene Formeln - Direkt zur richtigen Antwort</div>
+    <p class="section-intro">Sobald diese Schlüsselwörter in der Prüfungsfrage erscheinen, ist die Antwort eindeutig:</p>
+    <table class="golden-table">
+      <thead><tr><th>Wenn in der Frage steht...</th><th>Richtige Antwort</th></tr></thead>
+      <tbody>
+        <tr><td>Infrastructure as Code / YAML / JSON Template</td><td>CloudFormation</td></tr>
+        <tr><td>Minimum management overhead / Just upload code</td><td>Elastic Beanstalk</td></tr>
+        <tr><td>Audit user activity / Who deleted the resource</td><td>CloudTrail</td></tr>
+        <tr><td>DDoS attack mitigation / Layer 3 and Layer 4 protection</td><td>Shield</td></tr>
+        <tr><td>Compliance reports / ISO certificates download</td><td>Artifact</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+</main>
+
+<script>
+  const scrollBtn = document.getElementById('scroll-top');
+  window.addEventListener('scroll', () => {
+    scrollBtn.classList.toggle('visible', window.scrollY > 300);
+  });
+</script>
+
+</body>
+</html>
